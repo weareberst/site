@@ -1,0 +1,25 @@
+{% if slug %}
+  {% set item = collections.work | findBySlug(slug) %}
+  {% if item %}
+    {% set title = title | default(item.data.title) %}
+    {% set img = img | default(item.data.images.teaser) | default(item.data.images.hero) %}
+    {% set client = client | default(item.data.client) %}
+    {% set services = services | default(item.data.services) %}
+    {% set url = url | default(item.url) %}
+  {% endif %}
+{% endif %}
+
+<div class="teaser">
+  <a href="{{ url }}">
+    <img class="teaser__img" src="{{ img }}">
+  </a>
+  <h4 class="teaser__title"><a href="{{ url }}">{{ title }}</a></h4>
+  <p class="teaser__client">{{ client }}</p>
+  {% if services %}
+  <ul class="teaser__services">
+  {% for service in services %}
+    <li class="teaser__service">{{ service }}</li>
+  {% endfor %}
+  </ul>
+  {% endif %}
+</div>

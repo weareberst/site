@@ -1,0 +1,22 @@
+$color-blue-bright: #0101ff;
+$color-blue-dark: #040a6c;
+$color-grey-lightest: #f7f8fa;
+$color-grey-light: #878a98;
+$color-grey-mid: #595a61;
+$color-grey-dark: #181929;
+$color-red: #fd4531;
+$color-aquamarine: #aafee6;
+$color-white: #fff;
+
+$breakpoint-small: 500px;
+$breakpoint-medium: 800px;
+$breakpoint-large: 1100px;
+$breakpoint-max: 1274px;
+
+$font-stack-body: Apercu, -apple-system, BlinkMacSystemFont, sans-serif;
+$font-stack-display: Mirador, Georgia, serif;
+
+@mixin span($start: 1, $end: -1) {
+  grid-column-start: $start;
+  grid-column-end: $end;
+}

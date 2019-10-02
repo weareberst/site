@@ -1,0 +1,12 @@
+<div class="testimonial">
+  <blockquote class="testimonial__quote">
+    <p>{{ quote }}</p>
+  </blockquote>
+  <div class="testimonial__citation">
+    {% if cite.img %}
+    <img class="testimonial__face" src="{{ cite.img }}" alt="Picture of {{ cite.name }}">
+    {% endif %}
+    <h6 class="testimonial__name">{{ cite.name }}</h6>
+    <span class="testimonial__role">{{ cite.role }}</span>
+  </div>
+</div>

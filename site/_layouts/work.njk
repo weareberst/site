@@ -1,0 +1,24 @@
+---
+layout: skeleton
+---
+
+<div class="slat">
+  <div class="slat__container">
+
+    <img src="{{ images.hero }}" alt="">
+
+    <h1>{{ client }}</h1>
+    <h2>{{ title }}</h2>
+
+    {% if services %}
+    <ul>
+    {% for service in services %}
+      <li>{{ service }}</li>
+    {% endfor %}
+    </ul>
+    {% endif %}
+
+  </div>
+</div>
+
+{{ content | safe }}
