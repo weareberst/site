@@ -1,5 +1,5 @@
 {% if slug %}
-  {% set item = collections.work | findBySlug(slug) %}
+  {% set item = collections.projects | findBySlug(slug) %}
   {% if item %}
     {% set title = title | default(item.data.title) %}
     {% set img = img | default(item.data.images.teaser) | default(item.data.images.hero) %}
