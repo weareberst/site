@@ -1,4 +1,5 @@
 @import 'normalize-scss/sass/normalize/import-now';
+@import './lib';
 @import './setup';
 @import './grid';
 @import './fonts';
@@ -12,10 +13,11 @@
 
 html {
   font-family: $font-stack-body;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  // -webkit-font-smoothing: antialiased;
+  // -moz-osx-font-smoothing: grayscale;
   line-height: 1.4;
   font-size: 18px;
+  color: $color-grey-dark;
 }
 
 ul,
@@ -61,8 +63,76 @@ h1 {
   color: $color-blue-bright;
 }
 
-.self-b {
-  align-self: end;
+.heading-personality {
+  @include font-size(64px, 78px, 92px);
+  font-family: $font-stack-display;
+  font-weight: 900;
+  line-height: 1;
+  color: $color-blue-dark;
+}
+
+.heading-xxl {
+  @include font-size(38px, 54px, 64px);
+  font-weight: 400;
+  color: $color-blue-bright;
+  line-height: 1.2;
+}
+
+.heading-xl {
+  @include font-size(38px, 45px, 54px);
+  color: $color-blue-bright;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.heading-l {
+  @include font-size(32px, 32px, 38px);
+  color: $color-blue-dark;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.heading-m {
+  @include font-size(22px, 26px, 26px);
+  color: $color-blue-dark;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.heading-s {
+  @include font-size(18px, 20px, 22px);
+  color: $color-blue-dark;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.text-intro {
+  @include font-size(18px, 32px, 38px);
+  color: $color-grey-light;
+  strong {
+    font-weight: normal;
+    color: $color-grey-dark;
+  }
+}
+
+.text-body-xl {
+  @include font-size(22px, 26px, 32px);
+  color: $color-grey-mid;
+}
+
+.text-body-l {
+  @include font-size(18px, 20px, 22px);
+  color: $color-blue-dark;
+}
+
+.text-body-m {
+  @include font-size(16px, 18px, 18px);
+  color: $color-blue-dark;
+}
+
+.text-body-s {
+  @include font-size(15px, 16px, 16px);
+  color: $color-grey-mid;
 }
 
 @import './components/article';

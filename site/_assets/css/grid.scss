@@ -1,15 +1,12 @@
-/* Raster grid subsystem (rsms.me/raster) */
 grid,
 .grid {
   display: grid;
-  --grid-tc: repeat(8, 1fr);
-  grid-column-gap: var(--column-gap, 4%);
-  grid-template-columns: var(--grid-tc);
+  grid-column-gap: $grid-gutter-three-col;
+  grid-template-columns: repeat(3, 1fr);
   --grid-cs: 1; /* column start */
   --grid-ce: -1; /* column end */
 }
 
-/* c -- cell or column */
 grid > cell,
 .grid > * {
   display: block;
@@ -20,31 +17,6 @@ grid > cell,
 .grid > * {
   grid-column-start: 1;
   grid-column-end: -1;
-}
-
-grid[cols='1'] {
-  --grid-tc: repeat(1, 1fr);
-}
-grid[cols='2'] {
-  --grid-tc: repeat(2, 1fr);
-}
-grid[cols='3'] {
-  --grid-tc: repeat(3, 1fr);
-}
-grid[cols='4'] {
-  --grid-tc: repeat(4, 1fr);
-}
-grid[cols='5'] {
-  --grid-tc: repeat(5, 1fr);
-}
-grid[cols='6'] {
-  --grid-tc: repeat(6, 1fr);
-}
-grid[cols='7'] {
-  --grid-tc: repeat(7, 1fr);
-}
-grid[cols='8'] {
-  --grid-tc: repeat(8, 1fr);
 }
 
 /* span=start... */
@@ -118,6 +90,7 @@ grid > cell[span$='-8'] {
 }
 
 /* connect vars */
+
 grid > cell[span] {
   grid-column-end: span var(--grid-ce);
 }
@@ -130,150 +103,12 @@ grid > cell[span*='-'],
 grid > cell[span*='..'] {
   grid-column-end: var(--grid-ce);
 }
+grid > cell:not([span]),
 grid > cell[span='row'] {
   grid-column: 1 / -1;
 }
 
-@media only screen and (min-width: #{$breakpoint-small - 1px}) {
-  grid[cols-s='1'] {
-    --grid-tc: repeat(1, 1fr);
-  }
-  grid[cols-s='2'] {
-    --grid-tc: repeat(2, 1fr);
-  }
-  grid[cols-s='3'] {
-    --grid-tc: repeat(3, 1fr);
-  }
-  grid[cols-s='4'] {
-    --grid-tc: repeat(4, 1fr);
-  }
-  grid[cols-s='5'] {
-    --grid-tc: repeat(5, 1fr);
-  }
-  grid[cols-s='6'] {
-    --grid-tc: repeat(6, 1fr);
-  }
-  grid[cols-s='7'] {
-    --grid-tc: repeat(7, 1fr);
-  }
-  grid[cols-s='8'] {
-    --grid-tc: repeat(8, 1fr);
-  }
-
-  /* span-s=start... */
-  grid > cell[span-s^='1'] {
-    --grid-cs: 1;
-  }
-  grid > cell[span-s^='2'] {
-    --grid-cs: 2;
-  }
-  grid > cell[span-s^='3'] {
-    --grid-cs: 3;
-  }
-  grid > cell[span-s^='4'] {
-    --grid-cs: 4;
-  }
-  grid > cell[span-s^='5'] {
-    --grid-cs: 5;
-  }
-  grid > cell[span-s^='6'] {
-    --grid-cs: 6;
-  }
-  grid > cell[span-s^='7'] {
-    --grid-cs: 7;
-  }
-  grid > cell[span-s^='8'] {
-    --grid-cs: 8;
-  }
-
-  /* span-s=...+width, span-s=...-end */
-  grid > cell[span-s$='+1'],
-  grid > cell[span-s='1'] {
-    --grid-ce: 1;
-  }
-  grid > cell[span-s$='+2'],
-  grid > cell[span-s$='-1'],
-  grid > cell[span-s='2'] {
-    --grid-ce: 2;
-  }
-  grid > cell[span-s$='+3'],
-  grid > cell[span-s$='-2'],
-  grid > cell[span-s='3'] {
-    --grid-ce: 3;
-  }
-  grid > cell[span-s$='+4'],
-  grid > cell[span-s$='-3'],
-  grid > cell[span-s='4'] {
-    --grid-ce: 4;
-  }
-  grid > cell[span-s$='+5'],
-  grid > cell[span-s$='-4'],
-  grid > cell[span-s='5'] {
-    --grid-ce: 5;
-  }
-  grid > cell[span-s$='+6'],
-  grid > cell[span-s$='-5'],
-  grid > cell[span-s='6'] {
-    --grid-ce: 6;
-  }
-  grid > cell[span-s$='+7'],
-  grid > cell[span-s$='-6'],
-  grid > cell[span-s='7'] {
-    --grid-ce: 7;
-  }
-  grid > cell[span-s$='+8'],
-  grid > cell[span-s$='-7'],
-  grid > cell[span-s='8'] {
-    --grid-ce: 8;
-  }
-  grid > cell[span-s$='-8'] {
-    --grid-ce: 9;
-  }
-
-  /* connect vars */
-  grid > cell[span-s] {
-    grid-column-end: span var(--grid-ce);
-  }
-  grid > cell[span-s*='+'],
-  grid > cell[span-s*='-'],
-  grid > cell[span-s*='..'] {
-    grid-column-start: var(--grid-cs);
-  }
-  grid > cell[span-s*='-'],
-  grid > cell[span-s*='..'] {
-    grid-column-end: var(--grid-ce);
-  }
-  grid > cell[span-s='row'] {
-    grid-column: 1 / -1;
-  }
-}
-
-@media only screen and (min-width: #{$breakpoint-medium - 1px}) {
-  grid[cols-m='1'] {
-    --grid-tc: repeat(1, 1fr);
-  }
-  grid[cols-m='2'] {
-    --grid-tc: repeat(2, 1fr);
-  }
-  grid[cols-m='3'] {
-    --grid-tc: repeat(3, 1fr);
-  }
-  grid[cols-m='4'] {
-    --grid-tc: repeat(4, 1fr);
-  }
-  grid[cols-m='5'] {
-    --grid-tc: repeat(5, 1fr);
-  }
-  grid[cols-m='6'] {
-    --grid-tc: repeat(6, 1fr);
-  }
-  grid[cols-m='7'] {
-    --grid-tc: repeat(7, 1fr);
-  }
-  grid[cols-m='8'] {
-    --grid-tc: repeat(8, 1fr);
-  }
-
+@media only screen and (min-width: #{$breakpoint-medium}) {
   /* span-m=start... */
   grid > cell[span-m^='1'] {
     --grid-cs: 1;
@@ -283,21 +118,6 @@ grid > cell[span='row'] {
   }
   grid > cell[span-m^='3'] {
     --grid-cs: 3;
-  }
-  grid > cell[span-m^='4'] {
-    --grid-cs: 4;
-  }
-  grid > cell[span-m^='5'] {
-    --grid-cs: 5;
-  }
-  grid > cell[span-m^='6'] {
-    --grid-cs: 6;
-  }
-  grid > cell[span-m^='7'] {
-    --grid-cs: 7;
-  }
-  grid > cell[span-m^='8'] {
-    --grid-cs: 8;
   }
 
   /* span-m=...+width, span-m=...-end */
@@ -315,34 +135,14 @@ grid > cell[span='row'] {
   grid > cell[span-m='3'] {
     --grid-ce: 3;
   }
-  grid > cell[span-m$='+4'],
-  grid > cell[span-m$='-3'],
-  grid > cell[span-m='4'] {
+  grid > cell[span-m$='-3'] {
     --grid-ce: 4;
   }
-  grid > cell[span-m$='+5'],
-  grid > cell[span-m$='-4'],
-  grid > cell[span-m='5'] {
-    --grid-ce: 5;
-  }
-  grid > cell[span-m$='+6'],
-  grid > cell[span-m$='-5'],
-  grid > cell[span-m='6'] {
-    --grid-ce: 6;
-  }
-  grid > cell[span-m$='+7'],
-  grid > cell[span-m$='-6'],
-  grid > cell[span-m='7'] {
-    --grid-ce: 7;
-  }
-  grid > cell[span-m$='+8'],
-  grid > cell[span-m$='-7'],
-  grid > cell[span-m='8'] {
-    --grid-ce: 8;
-  }
-  grid > cell[span-m$='-8'] {
-    --grid-ce: 9;
-  }
+  // grid > cell[span-m$='+4'],
+  // grid > cell[span-m$='-3'],
+  // grid > cell[span-m='4'] {
+  //   --grid-ce: 4;
+  // }
 
   /* connect vars */
   grid > cell[span-m] {
@@ -357,35 +157,19 @@ grid > cell[span='row'] {
   grid > cell[span-m*='..'] {
     grid-column-end: var(--grid-ce);
   }
+  grid > cell[span-m$='..'] {
+    grid-column-end: -1;
+  }
   grid > cell[span-m='row'] {
     grid-column: 1 / -1;
   }
 }
 
-@media only screen and (min-width: #{$breakpoint-large - 1px}) {
-  grid[cols-l='1'] {
-    --grid-tc: repeat(1, 1fr);
-  }
-  grid[cols-l='2'] {
-    --grid-tc: repeat(2, 1fr);
-  }
-  grid[cols-l='3'] {
-    --grid-tc: repeat(3, 1fr);
-  }
-  grid[cols-l='4'] {
-    --grid-tc: repeat(4, 1fr);
-  }
-  grid[cols-l='5'] {
-    --grid-tc: repeat(5, 1fr);
-  }
-  grid[cols-l='6'] {
-    --grid-tc: repeat(6, 1fr);
-  }
-  grid[cols-l='7'] {
-    --grid-tc: repeat(7, 1fr);
-  }
-  grid[cols-l='8'] {
-    --grid-tc: repeat(8, 1fr);
+@media only screen and (min-width: #{$breakpoint-large}) {
+  grid,
+  .grid {
+    grid-column-gap: $grid-gutter-six-col;
+    grid-template-columns: repeat(6, 1fr);
   }
 
   /* span-l=start... */
@@ -406,12 +190,6 @@ grid > cell[span='row'] {
   }
   grid > cell[span-l^='6'] {
     --grid-cs: 6;
-  }
-  grid > cell[span-l^='7'] {
-    --grid-cs: 7;
-  }
-  grid > cell[span-l^='8'] {
-    --grid-cs: 8;
   }
 
   /* span-l=...+width, span-l=...-end */
@@ -444,18 +222,8 @@ grid > cell[span='row'] {
   grid > cell[span-l='6'] {
     --grid-ce: 6;
   }
-  grid > cell[span-l$='+7'],
-  grid > cell[span-l$='-6'],
-  grid > cell[span-l='7'] {
+  grid > cell[span-l$='-6'] {
     --grid-ce: 7;
-  }
-  grid > cell[span-l$='+8'],
-  grid > cell[span-l$='-7'],
-  grid > cell[span-l='8'] {
-    --grid-ce: 8;
-  }
-  grid > cell[span-l$='-8'] {
-    --grid-ce: 9;
   }
 
   /* connect vars */
@@ -471,7 +239,135 @@ grid > cell[span='row'] {
   grid > cell[span-l*='..'] {
     grid-column-end: var(--grid-ce);
   }
+  grid > cell[span-l$='..'] {
+    grid-column-end: -1;
+  }
   grid > cell[span-l='row'] {
     grid-column: 1 / -1;
+  }
+}
+
+@media only screen and (min-width: #{$breakpoint-xlarge}) {
+  grid,
+  .grid {
+    grid-column-gap: $grid-gutter-eight-col;
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+  /* span-xl=start... */
+  grid > cell[span-xl^='1'] {
+    --grid-cs: 1;
+  }
+  grid > cell[span-xl^='2'] {
+    --grid-cs: 2;
+  }
+  grid > cell[span-xl^='3'] {
+    --grid-cs: 3;
+  }
+  grid > cell[span-xl^='4'] {
+    --grid-cs: 4;
+  }
+  grid > cell[span-xl^='5'] {
+    --grid-cs: 5;
+  }
+  grid > cell[span-xl^='6'] {
+    --grid-cs: 6;
+  }
+  grid > cell[span-xl^='7'] {
+    --grid-cs: 7;
+  }
+  grid > cell[span-xl^='8'] {
+    --grid-cs: 8;
+  }
+
+  /* span-xl=...+width, span-xl=...-end */
+  grid > cell[span-xl$='+1'],
+  grid > cell[span-xl='1'] {
+    --grid-ce: 1;
+  }
+  grid > cell[span-xl$='+2'],
+  grid > cell[span-xl$='-1'],
+  grid > cell[span-xl='2'] {
+    --grid-ce: 2;
+  }
+  grid > cell[span-xl$='+3'],
+  grid > cell[span-xl$='-2'],
+  grid > cell[span-xl='3'] {
+    --grid-ce: 3;
+  }
+  grid > cell[span-xl$='+4'],
+  grid > cell[span-xl$='-3'],
+  grid > cell[span-xl='4'] {
+    --grid-ce: 4;
+  }
+  grid > cell[span-xl$='+5'],
+  grid > cell[span-xl$='-4'],
+  grid > cell[span-xl='5'] {
+    --grid-ce: 5;
+  }
+  grid > cell[span-xl$='+6'],
+  grid > cell[span-xl$='-5'],
+  grid > cell[span-xl='6'] {
+    --grid-ce: 6;
+  }
+  grid > cell[span-xl$='+7'],
+  grid > cell[span-xl$='-6'],
+  grid > cell[span-xl='7'] {
+    --grid-ce: 7;
+  }
+  grid > cell[span-xl$='+8'],
+  grid > cell[span-xl$='-7'],
+  grid > cell[span-xl='8'] {
+    --grid-ce: 8;
+  }
+  grid > cell[span-xl$='-8'] {
+    --grid-ce: 9;
+  }
+
+  /* connect vars */
+  grid > cell[span-xl] {
+    grid-column-end: span var(--grid-ce);
+  }
+  grid > cell[span-xl*='+'],
+  grid > cell[span-xl*='-'],
+  grid > cell[span-xl*='..'] {
+    grid-column-start: var(--grid-cs);
+  }
+  grid > cell[span-xl*='-'],
+  grid > cell[span-xl*='..'] {
+    grid-column-end: var(--grid-ce);
+  }
+  grid > cell[span-xl$='..'] {
+    grid-column-end: -1;
+  }
+  grid > cell[span-xl='row'] {
+    grid-column: 1 / -1;
+  }
+}
+
+@mixin span($start, $end, $bp) {
+  @if $bp {
+    @media only screen and (min-width: #{map-get($breakpoints, $bp) - 1px}) {
+      grid-column-start: $start;
+      grid-column-end: $end;
+    }
+  } @else if $bp or $bp == small {
+    grid-column-start: $start;
+    grid-column-end: $end;
+  }
+}
+
+@mixin grid() {
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: $grid-gutter-three-col;
+
+  @media only screen and (min-width: #{$breakpoint-large}) {
+    grid-template-columns: repeat(6, 1fr);
+    grid-column-gap: $grid-gutter-six-col;
+  }
+
+  @media only screen and (min-width: #{$breakpoint-xlarges}) {
+    grid-template-columns: repeat(8, 1fr);
+    grid-column-gap: $grid-gutter-eight-col;
   }
 }

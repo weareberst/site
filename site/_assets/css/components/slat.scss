@@ -1,12 +1,11 @@
 .slat {
   width: 100%;
-  padding-left: 2vw;
-  padding-right: 2vw;
+  @include tween('padding-left', 26px, 54px, 60px);
+  @include tween('padding-right', 26px, 54px, 60px);
+
   &__container {
     max-width: $breakpoint-max;
     margin: 0 auto;
-    padding-top: 32px;
-    padding-bottom: 32px;
   }
 
   &--alt {

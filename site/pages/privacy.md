@@ -2,4 +2,4 @@
 title: Privacy Policy
 ---
 
-This is a **Privacy Policy**
+Some questions here.

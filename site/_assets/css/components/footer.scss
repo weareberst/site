@@ -1,15 +1,30 @@
 .footer {
   background-color: $color-blue-bright;
   color: $color-white;
-  &__container {
-    padding-top: 64px;
-    padding-bottom: 64px;
-  }
 
   a:link,
   a:visited,
   a:hover,
   a:active {
     color: $color-aquamarine;
+  }
+
+  &__container {
+    @extend .px-1;
+  }
+
+  &__contact {
+    @extend .text-intro;
+    color: $color-white;
+
+    span {
+      display: inline-block;
+      margin-bottom: 26px;
+    }
+
+    * + *:before {
+      content: '\A';
+      white-space: pre;
+    }
   }
 }

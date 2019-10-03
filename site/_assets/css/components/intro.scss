@@ -2,32 +2,22 @@
   padding-top: 64px;
   padding-bottom: 64px;
 
+  &__title,
+  &__strapline {
+    @include span(2, -1, medium);
+    @include span(3, -1, large);
+  }
+
   &__title {
-    font-family: $font-stack-display;
-    font-weight: 900;
-    font-size: 92px;
+    @extend .heading-personality;
     word-spacing: 1000px;
-    line-height: 1;
-    color: $color-blue-dark;
+    @include span(3, 6, xlarge);
   }
 
   &__strapline {
+    @include font-size(18px, 22px, 26px);
     align-self: end;
     padding-bottom: 18px;
-  }
-
-  @media all and (min-width: $breakpoint-medium) {
-    &__title {
-      @include span(2, 6);
-    }
-    &__strapline {
-      @include span(6);
-    }
-  }
-
-  @media all and (min-width: $breakpoint-large) {
-    &__title {
-      @include span(3, 6);
-    }
+    @include span(6, -1, xlarge);
   }
 }

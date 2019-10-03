@@ -7,18 +7,38 @@ $color-grey-dark: #181929;
 $color-red: #fd4531;
 $color-aquamarine: #aafee6;
 $color-white: #fff;
-
 $color-text: $color-grey-dark;
 
-$breakpoint-small: 500px;
-$breakpoint-medium: 800px;
-$breakpoint-large: 1100px;
+$breakpoint-medium: 480px;
+$breakpoint-large: 768px;
+$breakpoint-xlarge: 1024px;
 $breakpoint-max: 1274px;
+
+$breakpoints: (
+  medium: $breakpoint-medium,
+  large: $breakpoint-large,
+  xlarge: $breakpoint-xlarge,
+  max: $breakpoint-max
+);
+
+$grid-gutter-three-col: 26px;
+$grid-gutter-six-col: 38px;
+$grid-gutter-eight-col: 54px;
 
 $font-stack-body: Apercu, -apple-system, BlinkMacSystemFont, sans-serif;
 $font-stack-display: Mirador, Georgia, serif;
 
-@mixin span($start: 1, $end: -1) {
-  grid-column-start: $start;
-  grid-column-end: $end;
+@mixin tween($property, $min, $med, $max) {
+  @include poly-fluid-sizing(
+    $property,
+    (
+      375px: $min,
+      $breakpoint-large: $med,
+      $breakpoint-xlarge: $max
+    )
+  );
+}
+
+@mixin font-size($min, $med, $max) {
+  @include tween('font-size', $min, $med, $max);
 }

@@ -2,24 +2,49 @@
   &__container {
     display: flex;
     align-items: center;
-    padding-top: 64px;
-    padding-bottom: 58px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     position: relative;
   }
 
   &__logo {
-    width: 140px;
-    position: absolute;
-    left: 0;
-    top: 64px;
+    display: block;
+    line-height: 1;
+    width: 90px;
+    height: 90px;
+    // width: 140px;
+    // position: absolute;
+    // left: 0;
+    // top: 64px;
   }
 
   &__contact {
+    @include font-size(18px, 20px, 22px);
     margin-left: auto;
-    font-size: 22px;
+    span {
+      display: none;
+    }
   }
 
   &--aquamarine {
     background-color: $color-aquamarine;
+  }
+
+  @media all and (min-width: $breakpoint-medium) {
+    &__logo {
+      position: absolute;
+      left: 0;
+      top: 60px;
+    }
+  }
+
+  @media all and (min-width: $breakpoint-large) {
+    &__logo {
+      width: 140px;
+      height: 140px;
+    }
+    &__contact span {
+      display: inline-block;
+    }
   }
 }
