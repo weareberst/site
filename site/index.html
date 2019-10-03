@@ -1,6 +1,10 @@
 ---
 title: A Venture Design Studio
 layout: skeleton
+teasers:
+  - babylon-health
+  - george-jensen
+  - babylon-health
 ---
 
 <div class="slat intro">
@@ -14,26 +18,42 @@ layout: skeleton
 </div>
 
 <div class="slat">
-  <div class="slat__container">
-    <grid>
-      <cell span="1-3">
-        {% component 'teaser.njk', { slug: 'babylon-health' } %}
-      </cell>
-      <cell span="4..">
-        {% component 'teaser.njk', { slug: 'george-jensen' } %}
-      </cell>
-    </grid>
-  </div>
+  <grid class="slat__container">
+    <cell span="1-3">
+      {% component 'teaser.njk', { slug: teasers[0] } %}
+    </cell>
+    <cell span="4..">
+      {% component 'teaser.njk', { slug: teasers[1] } %}
+    </cell>
+  </grid>
 </div>
 
 <div class="slat">
-  <div class="slat__container">
-    <div>
-      <p>
+  <grid class="slat__container">
+    <cell span-s="1-6">
+      <p class="lede">
         Using short, sharp, punchy engagements and the best parts
         of Lean Startup, Human–Centered Design and Product Strategy.
         <span>We help our partners with&hellip;</span>
       </p>
-    </div>
-  </div>
+    </cell>
+  </grid>
+</div>
+
+<div class="slat">
+  <grid class="slat__container">
+    <cell span-s="1-3">
+      <p class="lede">
+      Continue the story by describing how we’ve created a flexible funding model to best cater for the people and <span>approach we want to use</span>.
+      </p>
+    </cell>
+  </grid>
+</div>
+
+<div class="slat">
+  <grid class="slat__container">
+    <cell span-s="1-5">
+      {% component 'teaser.njk', { slug: teasers[2] } %}
+    </cell>
+  </grid>
 </div>

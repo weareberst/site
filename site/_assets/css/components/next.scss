@@ -1,0 +1,29 @@
+.next {
+  display: block;
+  margin-left: auto;
+  max-width: 360px;
+
+  &:link,
+  &:visited,
+  &:hover,
+  &:active {
+    text-decoration: none;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    font-size: 38px;
+    font-weight: 600;
+  }
+
+  &__arrow {
+    flex: none;
+    width: 84px;
+    margin-left: auto;
+  }
+
+  &__title {
+    color: $color-text;
+  }
+}

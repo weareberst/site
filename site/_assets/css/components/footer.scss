@@ -1,0 +1,15 @@
+.footer {
+  background-color: $color-blue-bright;
+  color: $color-white;
+  &__container {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  a:link,
+  a:visited,
+  a:hover,
+  a:active {
+    color: $color-aquamarine;
+  }
+}

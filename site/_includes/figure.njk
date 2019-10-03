@@ -1,0 +1,8 @@
+<figure class="figure{% if variant %} figure--{{ variant }}{% endif %}">
+  <img class="figure__img" src="{{ src }}"{% if alt %} alt="{{ alt }}"{% endif %}>
+  {% if caption %}
+  <figcaption class="figure__caption">
+    <p>{{ caption }}</p>
+  </figcaption>
+  {% endif %}
+</figure>

@@ -1,0 +1,25 @@
+.header {
+  &__container {
+    display: flex;
+    align-items: center;
+    padding-top: 64px;
+    padding-bottom: 58px;
+    position: relative;
+  }
+
+  &__logo {
+    width: 140px;
+    position: absolute;
+    left: 0;
+    top: 64px;
+  }
+
+  &__contact {
+    margin-left: auto;
+    font-size: 22px;
+  }
+
+  &--aquamarine {
+    background-color: $color-aquamarine;
+  }
+}

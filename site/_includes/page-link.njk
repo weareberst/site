@@ -1,0 +1,7 @@
+{% if slug %}
+  {% set page = collections.pages | findBySlug(slug) %}
+{% else %}
+  {% set page = {} %}
+{% endif %}
+
+<a href="{{ url | default(page.url) }}">{{ label | default(page.data.title) }}</a>

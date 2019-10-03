@@ -1,21 +1,34 @@
 const Nunjucks = require('nunjucks');
-const IncludeWithNunjucksExtension = require('./lib/nunjucks-include-with');
+const MarkdownIt = require('markdown-it');
+const ComponentExtension = require('./lib/nunjucks-component');
 
 module.exports = function(config) {
+  // Use customised Markdown library
+
+  const md = MarkdownIt({
+    html: true,
+    code: false
+  });
+  config.setLibrary('md', md);
+
+  // Use customised Nunjucks environment
+
   const nunjucksEnv = new Nunjucks.Environment(
     new Nunjucks.FileSystemLoader('site/_includes', {
       noCache: true
     })
   );
 
-  const includeWith = new IncludeWithNunjucksExtension({
-    nunjucksEnv,
-    tagName: 'component'
-  });
-
-  nunjucksEnv.addExtension('component', includeWith);
+  nunjucksEnv.addExtension(
+    'component',
+    new ComponentExtension({
+      nunjucksEnv
+    })
+  );
 
   config.setLibrary('njk', nunjucksEnv);
+
+  // Add template filters
 
   config.addFilter('findBySlug', (items, slug) =>
     items.find(item => item.fileSlug === slug)

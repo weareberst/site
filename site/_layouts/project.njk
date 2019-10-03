@@ -22,3 +22,24 @@ layout: skeleton
 </div>
 
 {{ content | safe }}
+
+{% if next %}
+{% set nextProject = collections.projects | findBySlug(next) %}
+{% if nextProject %}
+<div class="slat slat--alt">
+  <grid class="slat__container">
+    <cell span="row">
+      <a href="{{ nextProject.url }}" class="next">
+        <span class="next__link">
+          Next project
+          <svg class="next__arrow" viewBox="0 0 84 48" xmlns="http://www.w3.org/2000/svg"><path d="M84 24L59.621 48V28.4H0v-8.852h59.621L59.673 0z" fill="#040A6C" fill-rule="nonzero"/></svg>
+        </span>
+        <p class="next__title">
+          {{ nextProject.data.title }}
+        </p>
+      </a>
+    </cell>
+  </grid>
+</div>
+{% endif %}
+{% endif %}

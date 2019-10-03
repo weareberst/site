@@ -1,0 +1,15 @@
+.slat {
+  width: 100%;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  &__container {
+    max-width: $breakpoint-max;
+    margin: 0 auto;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  &--alt {
+    background-color: $color-grey-lightest;
+  }
+}

@@ -2,6 +2,7 @@
 @import './setup';
 @import './grid';
 @import './fonts';
+@import './utils';
 
 *,
 *:after,
@@ -14,7 +15,7 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.4;
-  font-size: 22px;
+  font-size: 18px;
 }
 
 ul,
@@ -64,4 +65,13 @@ h1 {
   align-self: end;
 }
 
-@import './components';
+@import './components/article';
+@import './components/figure';
+@import './components/footer';
+@import './components/header';
+@import './components/intro';
+@import './components/next';
+@import './components/prose';
+@import './components/slat';
+@import './components/teaser';
+@import './components/testimonial';
