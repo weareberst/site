@@ -1,14 +1,28 @@
 .slat {
   width: 100%;
-  @include tween('padding-left', 26px, 54px, 60px);
-  @include tween('padding-right', 26px, 54px, 60px);
 
   &__container {
     max-width: $breakpoint-max;
     margin: 0 auto;
+    padding-left: 26px;
+    padding-right: 26px;
   }
 
   &--alt {
     background-color: $color-grey-lightest;
+  }
+
+  @media all and (min-width: $breakpoint-large) {
+    &__container {
+      padding-left: 54px;
+      padding-right: 54px;
+    }
+  }
+
+  @media all and (min-width: $breakpoint-xlarge) {
+    &__container {
+      padding-left: 60px;
+      padding-right: 60px;
+    }
   }
 }

@@ -7,16 +7,7 @@
   <link rel="stylesheet" href="/assets/css/main.css">
   <title>{{ title }} | Berst</title>
 </head>
-<body>
-
-  <header class="slat header{% if headerVariant %} header--{{ headerVariant }}{% endif %}">
-    <div class="slat__container header__container">
-      <a href="/" class="header__logo">
-        {% component "logo" %}
-      </a>
-      <p class="header__contact"><span>Get in touch</span> <a href="mailto:hello@ber.st">hello@ber.st</a></p>
-    </div>
-  </header>
+<body class="layout layout--{{ layoutVariant }}">
 
   {{ content | safe }}
 

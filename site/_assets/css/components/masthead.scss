@@ -1,4 +1,4 @@
-.header {
+.masthead {
   &__container {
     display: flex;
     align-items: center;
@@ -22,6 +22,7 @@
     margin-left: auto;
     span {
       display: none;
+      margin-right: 20px;
     }
   }
 

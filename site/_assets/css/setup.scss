@@ -9,9 +9,6 @@ $color-aquamarine: #aafee6;
 $color-white: #fff;
 $color-text: $color-grey-dark;
 
-// @include tween('padding-left', 26px, 54px, 60px);
-// @include tween('padding-right', 26px, 54px, 60px);
-
 $breakpoint-medium: 480px + 26px;
 $breakpoint-medlarge: 620px + 54px;
 $breakpoint-large: 768px + 54px;

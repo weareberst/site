@@ -1,6 +1,6 @@
 .intro {
-  padding-top: 64px;
-  padding-bottom: 64px;
+  padding-top: 86px;
+  padding-bottom: 26px;
 
   &__title,
   &__strapline {
@@ -9,15 +9,37 @@
   }
 
   &__title {
-    @extend .heading-personality;
     word-spacing: 1000px;
-    @include span(3, 6, xlarge);
+    @extend .heading-personality;
+    @include span(2, 5, xlarge);
+    @include span(3, 6, xlarger);
   }
 
   &__strapline {
-    @include font-size(18px, 22px, 26px);
+    margin-top: 3em;
     align-self: end;
-    padding-bottom: 18px;
-    @include span(6, -1, xlarge);
+    @include font-size(18px, 22px, 26px);
+    @include span(5, -1, xlarge);
+    @include span(6, -1, xlarger);
+  }
+
+  @media all and (min-width: $breakpoint-medium) {
+    padding-top: 70px;
+    &__strapline {
+      margin-top: 2em;
+    }
+  }
+
+  @media all and (min-width: $breakpoint-large) {
+    padding-top: 47px;
+  }
+
+  @media all and (min-width: $breakpoint-xlarge) {
+    padding-top: 70px;
+
+    &__strapline {
+      margin-top: 0;
+      padding-bottom: 0.3em;
+    }
   }
 }
