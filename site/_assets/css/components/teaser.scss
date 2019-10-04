@@ -1,5 +1,106 @@
 .teaser {
+  display: block;
+
+  &:link,
+  &:visited,
+  &:hover,
+  &:active {
+    text-decoration: none;
+  }
+
   &__img {
     width: 100%;
+    z-index: 1;
+    position: relative;
+  }
+
+  &__panel {
+    background: $color-white;
+    width: 80%;
+    margin-top: -20%;
+    position: relative;
+    z-index: 2;
+    padding: 7% 3% 0 0;
+  }
+
+  &__title {
+    @include font-size(26px, 32px, 45px);
+    color: $color-blue-bright;
+    line-height: 1.2;
+    margin-bottom: 12px;
+    text-decoration: underline;
+  }
+
+  &__client span {
+    @extend .text-body-m;
+    font-weight: 500;
+    display: inline-block;
+    margin-right: 3px;
+  }
+
+  &__arrow {
+    width: 17px;
+  }
+
+  &__services {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 7px;
+  }
+
+  &__service {
+    font-size: 14px;
+    color: $color-grey-light;
+  }
+
+  &__service:after {
+    content: '∙';
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  &__service:last-child:after {
+    display: none;
+  }
+}
+
+.teaser-pair {
+  @include grid();
+
+  .teaser:first-child {
+    order: 1;
+    @include span(1, -1);
+    @include span(2, -1, medium);
+    @include span(3, -1, large);
+    @include span(4, -1, xlarge);
+    @extend .bleed-right;
+    @extend .mb-1;
+  }
+
+  .teaser:last-child {
+    order: 2;
+    @include span(1, -1);
+    @include span(1, 3, medium);
+    @include span(1, 4, large);
+    @include span(1, 4, xlarge);
+  }
+
+  @media all and (max-width: #{$breakpoint-medium - 1px}) {
+    .teaser:last-child {
+      margin-left: -1 * $grid-gutter;
+    }
+    .teaser:last-child .teaser__panel {
+      padding-left: $grid-gutter;
+    }
+  }
+
+  @media all and (min-width: $breakpoint-xlarge) {
+    .teaser:first-child {
+      order: 2;
+    }
+    .teaser:last-child {
+      order: 1;
+    }
   }
 }

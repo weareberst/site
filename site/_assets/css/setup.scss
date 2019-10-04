@@ -9,13 +9,21 @@ $color-aquamarine: #aafee6;
 $color-white: #fff;
 $color-text: $color-grey-dark;
 
-$breakpoint-medium: 480px + 26px;
-$breakpoint-medlarge: 620px + 54px;
-$breakpoint-large: 768px + 54px;
-$breakpoint-larger: 880px + 54px;
-$breakpoint-xlarge: 1024px + 60px;
-$breakpoint-xlarger: 1180px + 60px;
-$breakpoint-max: 1274px + 60px;
+$grid-gutter-three-col: 26px;
+$grid-gutter-six-col: 38px;
+$grid-gutter-eight-col: 54px;
+
+$grid-gutter: $grid-gutter-three-col;
+$grid-gutter-large: $grid-gutter-six-col;
+$grid-gutter-xlarge: $grid-gutter-eight-col;
+
+$breakpoint-medium: 480px + $grid-gutter-three-col;
+$breakpoint-medlarge: 620px + $grid-gutter-three-col;
+$breakpoint-large: 768px + $grid-gutter-six-col;
+$breakpoint-larger: 880px + $grid-gutter-six-col;
+$breakpoint-xlarge: 1024px + $grid-gutter-eight-col;
+$breakpoint-xlarger: 1180px + $grid-gutter-eight-col;
+$breakpoint-max: 1274px + $grid-gutter-eight-col;
 
 $breakpoints: (
   medium: $breakpoint-medium,
@@ -27,21 +35,18 @@ $breakpoints: (
   max: $breakpoint-max
 );
 
-$grid-gutter-three-col: 26px;
-$grid-gutter-six-col: 38px;
-$grid-gutter-eight-col: 54px;
-
 $font-stack-body: Apercu, -apple-system, BlinkMacSystemFont, sans-serif;
 $font-stack-display: Mirador, Georgia, serif;
 
-@mixin tween($property, $min, $med, $max) {
+@mixin tween($property, $min, $med, $max, $important: false) {
   @include poly-fluid-sizing(
     $property,
     (
       375px: $min,
       $breakpoint-large: $med,
       $breakpoint-xlarge: $max
-    )
+    ),
+    $important
   );
 }
 

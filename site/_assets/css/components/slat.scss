@@ -4,8 +4,8 @@
   &__container {
     max-width: $breakpoint-max;
     margin: 0 auto;
-    padding-left: 26px;
-    padding-right: 26px;
+    padding-left: $grid-gutter;
+    padding-right: $grid-gutter;
   }
 
   &--alt {
@@ -14,15 +14,15 @@
 
   @media all and (min-width: $breakpoint-large) {
     &__container {
-      padding-left: 54px;
-      padding-right: 54px;
+      padding-left: $grid-gutter-large;
+      padding-right: $grid-gutter-large;
     }
   }
 
   @media all and (min-width: $breakpoint-xlarge) {
     &__container {
-      padding-left: 60px;
-      padding-right: 60px;
+      padding-left: $grid-gutter-xlarge;
+      padding-right: $grid-gutter-xlarge;
     }
   }
 }

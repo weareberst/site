@@ -107,7 +107,7 @@ h1 {
 }
 
 .text-intro {
-  @include font-size(18px, 32px, 38px);
+  @include font-size(26px, 32px, 38px);
   color: $color-grey-light;
   strong {
     font-weight: normal;

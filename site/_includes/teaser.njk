@@ -9,17 +9,27 @@
   {% endif %}
 {% endif %}
 
-<div class="teaser">
-  <a href="{{ url }}">
-    <img class="teaser__img" src="{{ img }}">
-  </a>
-  <h4 class="teaser__title"><a href="{{ url }}">{{ title }}</a></h4>
-  <p class="teaser__client">{{ client }}</p>
-  {% if services %}
-  <ul class="teaser__services">
-  {% for service in services %}
-    <li class="teaser__service">{{ service }}</li>
-  {% endfor %}
-  </ul>
-  {% endif %}
-</div>
+<a href="{{ url }}" class="teaser{% if class %} {{ class }}{% endif %}">
+
+  <img class="teaser__img" src="{{ img }}">
+
+  <div class="teaser__panel">
+    <h4 class="teaser__title">{{ title }}</h4>
+    <p class="teaser__client">
+      <span>{{ client }}</span>
+      <svg class="teaser__arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 10">
+        <g fill="none" fill-rule="evenodd">
+          <path d="M-1185-1920h2400v6643h-2400z"/>
+          <path d="M17 5l-4.934 5V5.917H0V4.072h12.066L12.076 0z" fill="#FD4531" fill-rule="nonzero"/>
+        </g>
+      </svg>
+    </p>
+    {% if services %}
+    <ul class="teaser__services">
+    {% for service in services %}
+      <li class="teaser__service">{{ service }}</li>
+    {% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+</a>

@@ -345,13 +345,13 @@ grid > cell[span='row'] {
   }
 }
 
-@mixin span($start, $end, $bp) {
+@mixin span($start, $end, $bp: false) {
   @if $bp {
     @media only screen and (min-width: #{map-get($breakpoints, $bp) - 1px}) {
       grid-column-start: $start;
       grid-column-end: $end;
     }
-  } @else if $bp or $bp == small {
+  } @else if $bp == false or $bp == small {
     grid-column-start: $start;
     grid-column-end: $end;
   }

@@ -8,20 +8,16 @@ teasers:
 ---
 
 <div class="slat">
-  <grid class="slat__container pt-1">
-    <cell span-m="2-3" span-l="3.." span-xl="1-3">
+  <div class="slat__container teaser-pair pt-2 mb-1">
       {% component 'teaser.njk', { slug: teasers[0] } %}
-    </cell>
-    <cell span-m="1-2" span-l="1-3" span-xl="4..">
       {% component 'teaser.njk', { slug: teasers[1] } %}
-    </cell>
-  </grid>
+  </div>
 </div>
 
-<div class="slat">
-  <grid class="slat__container">
-    <cell span-l="1-4">
-      <p class="lede">
+<div class="slat slat--alt mb-1">
+  <grid class="slat__container px-1">
+    <cell span-l="1-5" span-xl="1-6">
+      <p class="text-intro">
         Using short, sharp, punchy engagements and the best parts
         of Lean Startup, Human–Centered Design and Product Strategy.
         <strong>We help our partners with&hellip;</strong>
@@ -30,17 +26,18 @@ teasers:
   </grid>
 </div>
 
-<div class="slat">
+<div class="slat mb-1">
   <grid class="slat__container">
-    <cell span-xl="1-3">
-      <p class="lede">
-      Continue the story by describing how we’ve created a flexible funding model to best cater for the people and <strong>approach we want to use</strong>.
+    <cell span-l="1-5" span-xl="1-3">
+      <p class="text-intro">
+      Continue the story by describing how we’ve created a flexible funding model to
+      best cater for the people and <strong>approach we want to use</strong>.
       </p>
     </cell>
   </grid>
 </div>
 
-<div class="slat">
+<div class="slat mb-1">
   <grid class="slat__container">
     <cell span-m="1-2" span-l="1-4" span-xl="1-5">
       {% component 'teaser.njk', { slug: teasers[2] } %}
@@ -49,6 +46,21 @@ teasers:
       {% component 'testimonial.njk', {
         quote: '“Berst were able to get seriously under the skin of a problem. Producing deep and provocative insight and creative artistry to a much greater depth than the ‘typical’ contractor / agency.”'
       } %}
+    </cell>
+  </grid>
+</div>
+
+<div class="slat slat--alt pb-1">
+  <grid class="slat__container pt-1">
+    <cell class="prose" span-l="3.." span-xl="6..">
+      <p class="text-intro">James Bates and James Box have worked in the design
+        industry for nearly two decades, helping organisations deliver and grow high-profile, breakthrough design projects.</p>
+      <p>But their sweet spot has always been innovation and in 2018 they chose
+        to narrow their focus and created Berst.​ Born as a venture design studio,
+        we are at our best partnering with [The Ambitious]. Those with the vision and determination to make a difference in the world. Those prepared to go beyond the obvious and take the brave leap forward. </p>
+      <p>Combining the spirit of a startup with the creativity of a design studio,
+        we get down in the trenches and work alongside our partners to turn fledgling
+        ideas into pioneering digital products.</p>
     </cell>
   </grid>
 </div>
