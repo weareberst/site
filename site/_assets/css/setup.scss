@@ -9,15 +9,24 @@ $color-aquamarine: #aafee6;
 $color-white: #fff;
 $color-text: $color-grey-dark;
 
-$breakpoint-medium: 480px;
-$breakpoint-large: 768px;
-$breakpoint-xlarge: 1024px;
-$breakpoint-max: 1274px;
+// @include tween('padding-left', 26px, 54px, 60px);
+// @include tween('padding-right', 26px, 54px, 60px);
+
+$breakpoint-medium: 480px + 26px;
+$breakpoint-medlarge: 620px + 54px;
+$breakpoint-large: 768px + 54px;
+$breakpoint-larger: 880px + 54px;
+$breakpoint-xlarge: 1024px + 60px;
+$breakpoint-xlarger: 1180px + 60px;
+$breakpoint-max: 1274px + 60px;
 
 $breakpoints: (
   medium: $breakpoint-medium,
+  medlarge: $breakpoint-medlarge,
   large: $breakpoint-large,
+  larger: $breakpoint-larger,
   xlarge: $breakpoint-xlarge,
+  xlarger: $breakpoint-xlarger,
   max: $breakpoint-max
 );
 

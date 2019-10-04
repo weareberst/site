@@ -2,9 +2,8 @@
   &__container {
     display: flex;
     align-items: center;
-    padding-top: 30px;
-    padding-bottom: 30px;
     position: relative;
+    height: 150px;
   }
 
   &__logo {
@@ -13,9 +12,9 @@
     width: 90px;
     height: 90px;
     // width: 140px;
-    // position: absolute;
-    // left: 0;
-    // top: 64px;
+    position: absolute;
+    left: 0;
+    top: 30px;
   }
 
   &__contact {
@@ -31,20 +30,30 @@
   }
 
   @media all and (min-width: $breakpoint-medium) {
+    &__container {
+      height: 120px;
+    }
     &__logo {
-      position: absolute;
-      left: 0;
       top: 60px;
     }
   }
 
   @media all and (min-width: $breakpoint-large) {
+    &__container {
+      height: 160px;
+    }
     &__logo {
       width: 140px;
       height: 140px;
     }
     &__contact span {
       display: inline-block;
+    }
+  }
+
+  @media all and (min-width: $breakpoint-xlarge) {
+    &__container {
+      height: 175px;
     }
   }
 }

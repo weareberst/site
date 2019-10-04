@@ -358,6 +358,7 @@ grid > cell[span='row'] {
 }
 
 @mixin grid() {
+  display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: $grid-gutter-three-col;
 
@@ -366,7 +367,7 @@ grid > cell[span='row'] {
     grid-column-gap: $grid-gutter-six-col;
   }
 
-  @media only screen and (min-width: #{$breakpoint-xlarges}) {
+  @media only screen and (min-width: #{$breakpoint-xlarge}) {
     grid-template-columns: repeat(8, 1fr);
     grid-column-gap: $grid-gutter-eight-col;
   }
