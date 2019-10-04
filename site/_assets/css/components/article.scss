@@ -5,6 +5,12 @@
   }
 
   &__title {
-    margin-bottom: 64px;
+    margin-bottom: 50px;
+  }
+
+  @media all and (min-width: $breakpoint-medium) {
+    &__title {
+      margin-bottom: 64px;
+    }
   }
 }

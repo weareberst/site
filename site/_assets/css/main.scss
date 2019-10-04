@@ -13,8 +13,6 @@
 
 html {
   font-family: $font-stack-body;
-  // -webkit-font-smoothing: antialiased;
-  // -moz-osx-font-smoothing: grayscale;
   line-height: 1.4;
   font-size: 18px;
   color: $color-grey-dark;
@@ -59,8 +57,7 @@ h6 {
 }
 
 h1 {
-  font-size: 64px;
-  color: $color-blue-bright;
+  @extend .heading-xxl;
 }
 
 .heading-personality {
@@ -76,6 +73,7 @@ h1 {
   font-weight: 400;
   color: $color-blue-bright;
   line-height: 1.2;
+  letter-spacing: -0.5px;
 }
 
 .heading-xl {
@@ -83,6 +81,7 @@ h1 {
   color: $color-blue-bright;
   font-weight: 500;
   line-height: 1.2;
+  letter-spacing: -0.5px;
 }
 
 .heading-l {
@@ -109,6 +108,7 @@ h1 {
 .text-intro {
   @include font-size(26px, 32px, 38px);
   color: $color-grey-light;
+  line-height: 1.4;
   strong {
     font-weight: normal;
     color: $color-grey-dark;
@@ -118,16 +118,19 @@ h1 {
 .text-body-xl {
   @include font-size(22px, 26px, 32px);
   color: $color-grey-mid;
+  line-height: 1.7;
 }
 
 .text-body-l {
   @include font-size(18px, 20px, 22px);
   color: $color-blue-dark;
+  line-height: 1.7;
 }
 
 .text-body-m {
   @include font-size(16px, 18px, 18px);
-  color: $color-blue-dark;
+  color: $color-grey-dark;
+  line-height: 1.7;
 }
 
 .text-body-s {

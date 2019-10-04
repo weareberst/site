@@ -1,5 +1,17 @@
 .prose {
+  @extend .text-body-m;
+
   > p {
-    margin-bottom: 1.2em;
+    margin-bottom: 1.7em;
+  }
+
+  > h2 {
+    @extend .heading-m;
+    margin-bottom: 1em;
+    margin-top: 2.2em;
+  }
+
+  > p.small {
+    @extend .text-body-s;
   }
 }
