@@ -4,7 +4,7 @@ layoutVariant: project
 ---
 
 <div class="layout__header slat">
-  <div class="slat__container">
+  <div class="slat__container" style="background-image: url('{{ images.hero }}')">
     {% component 'masthead' %}
   </div>
 </div>
@@ -12,8 +12,6 @@ layoutVariant: project
 <main class="layout__main">
   <div class="slat">
     <div class="slat__container">
-
-      <img src="{{ images.hero }}" alt="">
 
       <h1>{{ client }}</h1>
       <h2>{{ title }}</h2>
