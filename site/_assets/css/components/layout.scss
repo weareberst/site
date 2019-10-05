@@ -86,4 +86,42 @@ $home-slash: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' v
   &--page &__header {
     background-color: $color-aquamarine;
   }
+
+  &--project &__header {
+    background-repeat: no-repeat;
+    background-position: 50% 150px;
+    background-size: 100% auto;
+
+    .overview {
+      margin-top: 330px;
+      position: relative;
+    }
+
+    .overview:before {
+      content: '';
+      position: absolute;
+      left: -1 * $grid-gutter;
+      top: 0;
+      bottom: 0;
+      width: $grid-gutter;
+      background-color: $color-white;
+      height: 100%;
+    }
+
+    @media all and (min-width: $breakpoint-medium) {
+      background-position: 100% 0;
+      background-size: 70vw auto;
+
+      .overview {
+        margin-top: calc(50vw - 150px);
+      }
+    }
+
+    @media all and (min-width: $breakpoint-max) {
+      background-size: calc(50vw + (0.2 * #{$breakpoint-max})) auto;
+      .overview {
+        margin-top: calc(#{0.5 * $breakpoint-max} - 150px);
+      }
+    }
+  }
 }

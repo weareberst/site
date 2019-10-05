@@ -36,6 +36,12 @@ module.exports = function(config) {
 
   config.addFilter('isString', target => typeof target === 'string');
 
+  config.addFilter('markdown', str => md.render(str));
+
+  config.addFilter('domain', url => {
+    return url.indexOf('//') > -1 ? url.split('/')[2] : url.split('/')[0];
+  });
+
   return {
     dir: {
       input: 'site',

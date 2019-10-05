@@ -1,7 +1,8 @@
 .next {
   display: block;
   margin-left: auto;
-  max-width: 360px;
+  // max-width: 360px;
+  padding: 80px 0;
 
   &:link,
   &:visited,
@@ -11,10 +12,10 @@
   }
 
   &__link {
-    display: flex;
-    align-items: center;
-    font-size: 38px;
-    font-weight: 600;
+    // display: flex;
+    // align-items: center;
+    // font-size: 38px;
+    // font-weight: 600;
   }
 
   &__arrow {

@@ -2,6 +2,10 @@
   padding-top: 86px;
   padding-bottom: 26px;
 
+  &__container {
+    @include grid();
+  }
+
   &__title,
   &__strapline {
     @include span(2, -1, medium);

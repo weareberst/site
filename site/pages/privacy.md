@@ -18,4 +18,4 @@ We don’t use native social media ‘like’ or ‘sharing’ buttons which als
 
 Occasionally, we might receive your contact information from one of our partners. If we do, we protect it in exactly the same way as if you give it to us directly.
 
-<p class="small">We value your privacy as much as we do our own, so we’re committed to keeping your personal and business information safe. We’re uncomfortable with the information companies, governments, and other organisations keep on file, so we ask for only the bare minimum from our customers. We’ll never use your personal information for any reason other than why you gave it, and we’ll never give anyone access to it unless we’re forced to by law.</p>
+<p class="small mt-1">We value your privacy as much as we do our own, so we’re committed to keeping your personal and business information safe. We’re uncomfortable with the information companies, governments, and other organisations keep on file, so we ask for only the bare minimum from our customers. We’ll never use your personal information for any reason other than why you gave it, and we’ll never give anyone access to it unless we’re forced to by law.</p>

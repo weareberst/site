@@ -3,9 +3,48 @@ layout: skeleton
 layoutVariant: project
 ---
 
-<div class="layout__header slat">
-  <div class="slat__container" style="background-image: url('{{ images.hero }}')">
+<div class="layout__header slat"{% if images and images.hero %} style="background-image: url('{{ images.hero }}')"{% endif %}>
+  <div class="slat__container">
     {% component 'masthead' %}
+
+    <section class="overview">
+      <div class="overview__main">
+        <span class="overview__client">{{ client }}</span>
+        <h1 class="overview__title">{{ title }}</h1>
+
+        {% if intro %}
+        <div class="overview__intro">
+        {{ intro | markdown | safe }}
+        </div>
+        {% endif %}
+
+      </div>
+      <aside class="overview__aside">
+        <h4 class="overview__what">What we did</h4>
+
+        {% if duration or launched %}
+        <ul class="overview__meta">
+          {% if duration %}<li>{{ duration }} duration</li>{% endif %}
+          {% if launched %}<li>Launched in {{ launched }}</li>{% endif %}
+        </ul>
+        {% endif %}
+
+        {% if services %}
+        <ul class="overview__meta">
+        {% for service in services %}
+          <li>_{{ service }}</li>
+        {% endfor %}
+        </ul>
+        {% endif %}
+
+        {% if websiteUrl %}<a class="overview__link" href="{{ websiteUrl }}">{{ websiteUrl | domain }}</a>{% endif %}
+
+        {% if logo %}
+          <img class="overview__logo" src="{{ logo }}" alt="{{ client }} logo">
+        {% endif %}
+      </aside>
+
+    </section>
   </div>
 </div>
 
@@ -13,16 +52,7 @@ layoutVariant: project
   <div class="slat">
     <div class="slat__container">
 
-      <h1>{{ client }}</h1>
-      <h2>{{ title }}</h2>
 
-      {% if services %}
-      <ul>
-      {% for service in services %}
-        <li>{{ service }}</li>
-      {% endfor %}
-      </ul>
-      {% endif %}
 
     </div>
   </div>
