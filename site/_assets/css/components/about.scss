@@ -1,0 +1,46 @@
+.about {
+  background-image: url('/img/james-and-james.jpg');
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-size: 200vw auto;
+
+  &__container {
+    @include grid();
+    @include tween('padding-top', 45px, 64px, 92px);
+    padding-bottom: 110vw;
+    // @include tween('padding-bottom', 45px, 64px, 92px);
+  }
+
+  &__text {
+    @include span(1, -1);
+    @include span(4, -1, large);
+    @include span(6, -1, xlarge);
+  }
+
+  @media all and (min-width: $breakpoint-medium) {
+    background-size: 170vw auto;
+
+    &__container {
+      padding-bottom: 90vw;
+    }
+  }
+
+  @media all and (min-width: $breakpoint-large) {
+    background-size: 90vw auto;
+    background-position: 0 100%;
+
+    &__container {
+      @include tween('padding-bottom', 45px, 64px, 92px);
+    }
+  }
+
+  @media all and (min-width: $breakpoint-xlarge) {
+    background-size: 100vw auto;
+    background-position: 50% 100%;
+  }
+
+  @media all and (min-width: $breakpoint-max) {
+    background-size: #{$breakpoint-max} auto;
+    background-position: 50% 100%;
+  }
+}

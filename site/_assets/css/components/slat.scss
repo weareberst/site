@@ -12,6 +12,38 @@
     background-color: $color-grey-lightest;
   }
 
+  &--alt-corners {
+    background-color: $color-grey-lightest;
+    position: relative;
+    &:before,
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      background-repeat: no-repeat;
+      z-index: 2;
+    }
+    &:before {
+      width: 163px;
+      height: 163px;
+      top: 0;
+      left: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 163 163'%3E%3Cpath d='M0 0h163L0 163z' fill='%23FFF' fill-rule='evenodd'/%3E%3C/svg%3E");
+    }
+    &:after {
+      width: 480px;
+      height: 480px;
+      bottom: 0;
+      right: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 480'%3E%3Cpath d='M480 480H0L480 0z' fill='%23FFF' fill-rule='evenodd'/%3E%3C/svg%3E");
+    }
+  }
+
+  &--alt-corners &__container {
+    position: relative;
+    z-index: 3;
+  }
+
   @media all and (min-width: $breakpoint-large) {
     &__container {
       padding-left: $grid-gutter-large;

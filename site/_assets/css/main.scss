@@ -139,16 +139,19 @@ h1 {
   color: $color-grey-mid;
 }
 
+@import './layout';
+@import './components/about';
 @import './components/article';
 @import './components/figure';
 @import './components/footer';
+@import './components/funding';
 @import './components/intro';
-@import './components/layout';
 @import './components/content';
 @import './components/masthead';
 @import './components/next';
 @import './components/overview';
 @import './components/prose';
+@import './components/services';
 @import './components/slat';
 @import './components/teaser';
 @import './components/testimonial';

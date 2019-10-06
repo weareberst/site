@@ -14,7 +14,7 @@ teasers:
   </div>
 </div>
 
-<div class="slat slat--alt mb-1">
+<div class="slat slat--alt-corners mb-1">
   <grid class="slat__container px-1">
     <cell span-l="1-5" span-xl="1-6">
       <p class="text-intro">
@@ -44,15 +44,21 @@ teasers:
     </cell>
     <cell span-m="2.." span-l="4.." span-xl="6..">
       {% component 'testimonial.njk', {
-        quote: 'Berst were able to get seriously under the skin of a problem. Producing deep and provocative insight and creative artistry to a much greater depth than the ‘typical’ contractor / agency.'
+        quote: 'Berst were able to get seriously under the skin of a problem. Producing deep and provocative insight and creative artistry to a much greater depth than the ‘typical’ contractor / agency.',
+        cite: {
+          name: 'Yani Petrova',
+          role: 'Product Lead',
+          client: 'Babylon Health',
+          img: '/img/tmp-avatar.png'
+        }
       } %}
     </cell>
   </grid>
 </div>
 
-<div class="slat slat--alt pb-1">
-  <grid class="slat__container pt-1">
-    <cell class="prose" span-l="3.." span-xl="6..">
+<div class="slat slat--alt about">
+  <div class="slat__container about__container">
+    <div class="prose about__text">
       <p class="text-intro">James Bates and James Box have worked in the design
         industry for nearly two decades, helping organisations deliver and grow high-profile, breakthrough design projects.</p>
       <p>But their sweet spot has always been innovation and in 2018 they chose
@@ -61,6 +67,6 @@ teasers:
       <p>Combining the spirit of a startup with the creativity of a design studio,
         we get down in the trenches and work alongside our partners to turn fledgling
         ideas into pioneering digital products.</p>
-    </cell>
-  </grid>
+    </div>
+  </div>
 </div>
