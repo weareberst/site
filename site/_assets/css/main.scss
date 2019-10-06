@@ -33,7 +33,8 @@ img {
   display: block;
 }
 
-blockquote {
+blockquote,
+figure {
   padding: 0;
   margin: 0;
 }
@@ -143,6 +144,7 @@ h1 {
 @import './components/footer';
 @import './components/intro';
 @import './components/layout';
+@import './components/content';
 @import './components/masthead';
 @import './components/next';
 @import './components/overview';

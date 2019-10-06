@@ -17,13 +17,14 @@ $grid-gutter: $grid-gutter-three-col;
 $grid-gutter-large: $grid-gutter-six-col;
 $grid-gutter-xlarge: $grid-gutter-eight-col;
 
-$breakpoint-medium: 480px + $grid-gutter-three-col;
-$breakpoint-medlarge: 620px + $grid-gutter-three-col;
-$breakpoint-large: 768px + $grid-gutter-six-col;
-$breakpoint-larger: 880px + $grid-gutter-six-col;
-$breakpoint-xlarge: 1024px + $grid-gutter-eight-col;
-$breakpoint-xlarger: 1180px + $grid-gutter-eight-col;
-$breakpoint-max: 1274px + $grid-gutter-eight-col;
+$breakpoint-medium: 480px + ($grid-gutter-three-col * 2);
+$breakpoint-medlarge: 620px + ($grid-gutter-three-col * 2);
+$breakpoint-large: 768px + ($grid-gutter-six-col * 2);
+$breakpoint-larger: 880px + ($grid-gutter-six-col * 2);
+$breakpoint-xlarge: 1024px + ($grid-gutter-eight-col * 2);
+$breakpoint-xlarger: 1180px + ($grid-gutter-eight-col * 2);
+$breakpoint-max: 1274px + ($grid-gutter-eight-col * 2);
+$breakpoint-supermax: 2400px;
 
 $breakpoints: (
   medium: $breakpoint-medium,
@@ -32,7 +33,8 @@ $breakpoints: (
   larger: $breakpoint-larger,
   xlarge: $breakpoint-xlarge,
   xlarger: $breakpoint-xlarger,
-  max: $breakpoint-max
+  max: $breakpoint-max,
+  supermax: $breakpoint-supermax
 );
 
 $font-stack-body: Apercu, -apple-system, BlinkMacSystemFont, sans-serif;

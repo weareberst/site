@@ -123,5 +123,10 @@ $home-slash: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' v
         margin-top: calc(#{0.5 * $breakpoint-max} - 150px);
       }
     }
+
+    @media all and (min-width: $breakpoint-supermax) {
+      background-size: 1456px auto;
+      background-position: calc(50% + (1456px / 2) - (1274px * 0.2)) 0;
+    }
   }
 }

@@ -1,0 +1,11 @@
+{% set variant = 'imagepair-' + (variant | default('offset')) %}
+<div class="slat content content--{{ variant }}">
+  <div class="slat__container content__container">
+    {% for image in [images[0], images[1]] %}
+    <figure class="content__figure">
+      <img class="content__img" src="{{ image.src }}"{% if image.alt %} alt="{{ image.alt }}"{% endif %}>
+      {% if image.caption %}<figcaption class="content__caption">{{ image.caption }}</figcaption>{% endif %}
+    </figure>
+    {% endfor %}
+  </div>
+</div>

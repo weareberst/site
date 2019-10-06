@@ -20,13 +20,18 @@
   &__client {
     @extend .heading-xxl;
     padding-right: 20px;
+    margin-bottom: 5px;
+    display: block;
   }
 
   &__title {
     @extend .heading-xxl;
-    margin-bottom: $grid-gutter-xlarge;
     color: $color-grey-light;
     padding-right: 20px;
+  }
+
+  &__title + &__intro {
+    margin-top: $grid-gutter-xlarge;
   }
 
   &__intro {
@@ -50,6 +55,21 @@
   &__link {
     display: block;
     margin-top: 1.4em;
+
+    &:link,
+    &:visited,
+    &:hover,
+    &:active {
+      text-decoration: none;
+    }
+
+    span {
+      text-decoration: underline;
+    }
+  }
+
+  .icon--arrow {
+    width: 17px;
   }
 
   &__logo {

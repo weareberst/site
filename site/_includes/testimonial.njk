@@ -6,7 +6,9 @@
     {% if cite.img %}
     <img class="testimonial__face" src="{{ cite.img }}" alt="Picture of {{ cite.name }}">
     {% endif %}
-    <h6 class="testimonial__name">{{ cite.name }}</h6>
-    <span class="testimonial__role">{{ cite.role }}</span>
+    <div class="testimonial__who">
+      <h6 class="testimonial__name">{{ cite.name }}{% if cite.role %}, {{ cite.role }}{% endif %}</h6>
+      {% if cite.client %}<span class="testimonial__client">{{ cite.client }}</span>{% endif %}
+    </div>
   </div>
 </div>

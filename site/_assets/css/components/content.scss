@@ -1,0 +1,121 @@
+.content {
+  @include tween('margin-top', 64px, 92px, 160px);
+  @include tween('margin-bottom', 64px, 92px, 160px);
+
+  &:first-child {
+    margin-top: 3vw;
+  }
+
+  &__container {
+    @include grid();
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__caption {
+    font-size: 15px;
+    line-height: 18/15;
+    color: $color-grey-dark;
+  }
+
+  &--image-full &__img,
+  &--image-full &__caption,
+  &--image-offset &__img,
+  &--image-offset &__caption,
+  &--imagepair-offset &__figure,
+  &--imagepair-even &__figure {
+    @include span(1, -1);
+  }
+
+  &--image-offset &__img {
+    @include span(2, -1, large);
+    @include span(4, -1, xlarge);
+  }
+
+  &--image-offset &__caption {
+    @include span(1, 2, large);
+    @include span(2, 4, xlarge);
+  }
+
+  &--feature-img &__img {
+    max-width: 2400px;
+    margin: 0 auto;
+  }
+
+  &--imagepair-even &__figure:first-child {
+    @include span(1, 4, large);
+    @include span(1, 5, xlarge);
+  }
+
+  &--imagepair-even &__figure:last-child {
+    @include span(4, -1, large);
+    @include span(5, -1, xlarge);
+  }
+
+  &--imagepair-offset &__figure:first-child {
+    @include span(1, 6, large);
+    @include span(1, 6, xlarge);
+  }
+
+  &--imagepair-offset &__figure:last-child {
+    @include span(4, -1, large);
+    @include span(6, -1, xlarge);
+  }
+
+  &--image-full &__caption,
+  &--image-offset &__caption,
+  &--feature-img &__caption,
+  &--imagepair-even &__caption,
+  &--imagepair-offset &__caption {
+    margin-top: 10px;
+  }
+
+  &--text .prose {
+    @include span(1, -1);
+    @include span(2, -2, large);
+    @extend .text-body-l;
+    color: $color-text;
+  }
+
+  &--testimonial {
+    @include tween('padding-top', 45px, 64px, 92px);
+    @include tween('padding-bottom', 45px, 64px, 92px);
+  }
+
+  &--testimonial .testimonial {
+    @include span(1, -1);
+    @include span(2, -2, large);
+  }
+
+  @media all and (max-width: #{$breakpoint-large - 1px}) {
+    &--imagepair-even &__figure:last-child,
+    &--imagepair-offset &__figure:last-child {
+      margin-top: 45px;
+    }
+  }
+
+  @media all and (max-width: #{$breakpoint-xlarge - 1px}) {
+    &--imagepair-offset &__figure:last-child {
+      margin-top: 64px;
+    }
+  }
+
+  @media all and (min-width: $breakpoint-large) {
+    &--image-offset &__img {
+      order: 2;
+    }
+    &--image-offset &__caption {
+      order: 1;
+      margin-top: 0;
+    }
+
+    &--image-full &__caption,
+    &--feature-img &__caption,
+    &--imagepair-even &__caption,
+    &--imagepair-offset &__caption {
+      margin-top: 20px;
+    }
+  }
+}

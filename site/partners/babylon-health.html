@@ -16,26 +16,76 @@ intro: >
 next: george-jensen
 ---
 
-<div class="slat">
-  <grid class="slat__container">
-    <cell span="row">
-      Some content here
-    </cell>
-  </grid>
-</div>
 
-<div class="slat slat--alt">
-  <grid class="slat__container">
-    <cell span="row">
-      Some more content here
-    </cell>
-  </grid>
-</div>
+{% component "content/image-pair", {
+  images: [
+    {
+      src: "https://placekitten.com/g/600/400",
+      caption: "A short caption"
+    },
+    {
+      src: "https://placekitten.com/g/900/500",
+      caption: "Another image with a caption"
+    }
+  ]
+} %}
 
-<div class="slat">
-  <grid class="slat__container">
-    <cell span="row">
-      And some more
-    </cell>
-  </grid>
-</div>
+
+{% component "content/image", {
+  src: "https://placekitten.com/g/1000/560",
+  alt: "Some optional alt text",
+  caption: "Another optional caption for another image",
+  variant: "offset"
+} %}
+
+
+{% set text %}
+A sample paragraph of **markdown text** fusce ultricies est vel leo pulvinar, ut scelerisque justo posuere.
+Vivamus placerat nunc nisl, at cursus nisi pretium sit amet. Vivamus vel venenatis sapien.
+Praesent facilisis tortor ipsum, quis dapibus tortor aliquam ac.
+Nulla suscipit leo tristique elit iaculis gravida.
+
+Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+Cras feugiat, risus quis pharetra pulvinar, orci ipsum consequat nisi, in dignissim elit augue ac arcu.
+{% endset %}
+{% component "content/text", {
+  text: text
+} %}
+
+
+{% component "content/feature-image", {
+  small: "https://placekitten.com/g/768/1000",
+  medium: "https://placekitten.com/g/1274/716",
+  large: "https://placekitten.com/g/2400/1200",
+  caption: "Optional caption goes here"
+} %}
+
+
+{% component "content/image-pair", {
+  variant: 'even',
+  images: [
+    {
+      src: "https://placekitten.com/g/600/600",
+      caption: "A short caption"
+    },
+    {
+      src: "https://placekitten.com/g/600/300",
+      caption: "Another image with a caption"
+    }
+  ]
+} %}
+
+{% component "content/testimonial", {
+  quote: 'Berst were able to get seriously under the skin of a problem. Producing deep and provocative insight and creative artistry to a much greater depth than the ‘typical’ contractor / agency.',
+  cite: {
+    name: 'Yani Petrova',
+    role: 'Product Lead',
+    client: client,
+    img: '/img/tmp-avatar.png'
+  }
+} %}
+
+{% component "content/image", {
+  src: "https://placekitten.com/g/1000/560",
+  caption: "An optional caption for the image"
+} %}

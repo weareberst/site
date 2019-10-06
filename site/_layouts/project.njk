@@ -37,7 +37,12 @@ layoutVariant: project
         </ul>
         {% endif %}
 
-        {% if websiteUrl %}<a class="overview__link" href="{{ websiteUrl }}">{{ websiteUrl | domain }}</a>{% endif %}
+        {% if websiteUrl %}
+        <a class="overview__link" href="{{ websiteUrl }}">
+          <span>{{ websiteUrl | domain }}</span>
+          {% include "icons/arrow-right.svg" %}
+        </a>
+        {% endif %}
 
         {% if logo %}
           <img class="overview__logo" src="{{ logo }}" alt="{{ client }} logo">
@@ -49,13 +54,6 @@ layoutVariant: project
 </div>
 
 <main class="layout__main">
-  <div class="slat">
-    <div class="slat__container">
-
-
-
-    </div>
-  </div>
 
   {{ content | safe }}
 
@@ -63,19 +61,16 @@ layoutVariant: project
   {% set nextProject = collections.projects | findBySlug(next) %}
   {% if nextProject %}
   <div class="slat slat--alt">
-    <grid class="slat__container">
-      <cell span="row">
-        <a href="{{ nextProject.url }}" class="next">
-          <span class="next__link">
-            Next project
-            <svg class="next__arrow" viewBox="0 0 84 48" xmlns="http://www.w3.org/2000/svg"><path d="M84 24L59.621 48V28.4H0v-8.852h59.621L59.673 0z" fill="#040A6C" fill-rule="nonzero"/></svg>
-          </span>
-          <p class="next__title">
-            {{ nextProject.data.title }}
-          </p>
-        </a>
-      </cell>
-    </grid>
+    <div class="slat__container next">
+      <a href="{{ nextProject.url }}" class="next__container">
+        <span class="next__label">Next project</span>
+        <h4 class="next__title">{{ nextProject.data.title }}</h4>
+        <p class="next__client">
+          <span>{{ client }}</span>
+          {% include "icons/arrow-right.svg" %}
+        </p>
+      </a>
+    </div>
   </div>
   {% endif %}
   {% endif %}

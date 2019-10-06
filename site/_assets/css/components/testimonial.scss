@@ -1,0 +1,34 @@
+.testimonial {
+  &__quote {
+    @include font-size(22px, 26px, 26px);
+    line-height: 32/26;
+    color: $color-blue-dark;
+    margin-bottom: 1em;
+  }
+
+  &__citation {
+    display: flex;
+    align-items: center;
+  }
+
+  &__face {
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    margin-right: 15px;
+  }
+
+  &__who {
+  }
+
+  &__name {
+    font-weight: 700;
+    color: $color-blue-bright;
+    @include font-size(13px, 15px, 15px);
+  }
+
+  &__client {
+    color: $color-grey-dark;
+    @include font-size(13px, 15px, 15px);
+  }
+}

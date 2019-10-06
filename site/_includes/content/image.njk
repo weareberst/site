@@ -1,0 +1,7 @@
+{% set variant = 'image-' + (variant | default('full')) %}
+<div class="slat content content--{{ variant }}">
+  <figure class="slat__container content__container">
+    <img class="content__img" src="{{ src }}"{% if alt %} alt="{{ alt }}"{% endif %}>
+    {% if caption %}<figcaption class="content__caption">{{ caption }}</figcaption>{% endif %}
+  </figure>
+</div>
