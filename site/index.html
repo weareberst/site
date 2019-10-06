@@ -9,8 +9,8 @@ teasers:
 
 <div class="slat">
   <div class="slat__container teaser-pair pt-2 mb-1">
-      {% component 'teaser.njk', { slug: teasers[0] } %}
-      {% component 'teaser.njk', { slug: teasers[1] } %}
+    {% component 'teaser.njk', { slug: teasers[0] } %}
+    {% component 'teaser.njk', { slug: teasers[1] } %}
   </div>
 </div>
 
@@ -23,18 +23,35 @@ teasers:
         <strong>We help our partners with&hellip;</strong>
       </p>
     </cell>
+    <cell span="row">
+      <div style="background-color: #ddd; height: 300px; width: 100%; margin-top: 40px; color: #999; padding: 10px;">
+      [placeholder]
+      </div>
+    </cell>
   </grid>
 </div>
 
-<div class="slat mb-1">
-  <grid class="slat__container">
-    <cell span-l="1-5" span-xl="1-3">
-      <p class="text-intro">
-      Continue the story by describing how we’ve created a flexible funding model to
-      best cater for the people and <strong>approach we want to use</strong>.
-      </p>
-    </cell>
-  </grid>
+<div class="slat funding mb-2 mt-2">
+  <div class="slat__container funding__container">
+
+    <p class="funding__intro">
+    Continue the story by describing how we’ve created a flexible funding model to
+    best cater for the people and <strong>approach we want to use</strong>.
+    </p>
+
+    <div class="funding__panel">
+      <div class="funding__option">
+        <h4 class="funding__type">Fee-for-service</h4>
+        <p class="funding__summary">You invest <em>your</em> capital in return for our expertise.</p>
+        <p class="funding__description">The traditional agency model, fee-for-service is a good match for established organisations looking to explore new markets and incubate new ideas. Or, investors who recognise the need for external design expertise to unlock the potential of a venture.</p>
+      </div>
+      <div class="funding__option">
+        <h4 class="funding__type">Equity-for-service</h4>
+        <p class="funding__summary">We invest <em>our</em> expertise in exchange for equity in your venture.</p>
+        <p class="funding__description">​​Created for early-stage businesses hoping to get investment-ready or take the next big leap forward when capital is not yet abundant. Comes in various flavours (equity, profit or royalty share) and is often combined with fee-for-service.</p>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div class="slat mb-1">
@@ -42,7 +59,7 @@ teasers:
     <cell span-m="1-2" span-l="1-4" span-xl="1-5">
       {% component 'teaser.njk', { slug: teasers[2] } %}
     </cell>
-    <cell span-m="2.." span-l="4.." span-xl="6..">
+    <cell span-m="2.." span-l="4.." span-xl="6.." class="mt-1 align-end">
       {% component 'testimonial.njk', {
         quote: 'Berst were able to get seriously under the skin of a problem. Producing deep and provocative insight and creative artistry to a much greater depth than the ‘typical’ contractor / agency.',
         cite: {

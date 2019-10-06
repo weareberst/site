@@ -75,7 +75,7 @@
     @include span(3, -1, large);
     @include span(4, -1, xlarge);
     @extend .bleed-right;
-    @extend .mb-1;
+    @include tween('margin-bottom', 45px, 64px, 92px);
   }
 
   .teaser:last-child {
@@ -98,6 +98,7 @@
   @media all and (min-width: $breakpoint-xlarge) {
     .teaser:first-child {
       order: 2;
+      margin-bottom: 0;
     }
     .teaser:last-child {
       order: 1;
