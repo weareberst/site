@@ -105,3 +105,29 @@
     }
   }
 }
+
+.teaser-testimonial {
+  @include grid();
+
+  .teaser {
+    @include span(1, -1);
+    @include span(1, 3, medium);
+    @include span(1, 5, large);
+    @include span(1, 6, xlarge);
+  }
+
+  .testimonial {
+    align-self: end;
+    @include tween('margin-top', 45px, 64px, 92px);
+    @include span(1, -1);
+    @include span(2, -1, medium);
+    @include span(4, -1, large);
+    @include span(6, -1, xlarge);
+  }
+
+  @media all and (min-width: $breakpoint-xlarge) {
+    .testimonial {
+      margin-top: 0;
+    }
+  }
+}
