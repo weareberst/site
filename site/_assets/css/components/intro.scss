@@ -8,6 +8,7 @@
 
   &__title,
   &__strapline {
+    @include span(1, -1);
     @include span(2, -1, medium);
     @include span(3, -1, large);
   }

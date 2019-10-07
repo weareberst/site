@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "npm run pages-dev & npm run assets-dev",
     "pages-dev": "cross-env ELEVENTY_ENV=development npx eleventy --watch --serve",
-    "assets-dev": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js --watch"
+    "assets-dev": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js --watch",
+    "build": "eleventy && cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
   },
   "author": "",
   "license": "ISC",

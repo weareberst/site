@@ -1,2 +1,87 @@
 .services {
+  &__container {
+    @include grid();
+    @include tween('padding-top', 45px, 64px, 92px);
+    @include tween('padding-bottom', 45px, 64px, 92px);
+  }
+
+  &__intro {
+    @extend .text-intro;
+    @include span(1, -1);
+    @include span(1, -2, large);
+    @include span(1, 7, xlarge);
+  }
+
+  &__panel {
+    @include span(1, -1);
+    margin-top: 60px;
+  }
+
+  &__item svg {
+    width: 86px;
+    flex: none;
+  }
+
+  &__type {
+    font-size: 15px;
+    letter-spacing: 4px;
+    line-height: 1.4;
+    color: #909196;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  &__summary {
+    @extend .heading-m;
+    margin-bottom: 1em;
+    max-width: 270px;
+  }
+
+  @media all and (max-width: #{$breakpoint-large - 1px}) {
+    &__item {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    &__item + &__item {
+      @include tween('margin-top', 34px, 64px, 92px);
+    }
+
+    &__item-container {
+      padding-left: 30px;
+    }
+  }
+
+  @media all and (min-width: $breakpoint-medium) {
+    &__item svg {
+      width: 180px;
+    }
+  }
+
+  @media all and (min-width: $breakpoint-medlarge) and (max-width: #{$breakpoint-large - 1px}) {
+    &__detail {
+      display: flex;
+    }
+
+    &__detail > * {
+      width: 50%;
+    }
+
+    &__detail *:last-child {
+      padding-left: 30px;
+    }
+  }
+
+  @media all and (min-width: $breakpoint-large) {
+    &__panel {
+      display: flex;
+      margin-left: ($grid-gutter-eight-col / 2) * -1;
+      margin-right: ($grid-gutter-eight-col / 2) * -1;
+    }
+
+    &__item {
+      width: 33.3%;
+      padding: 0 $grid-gutter-eight-col / 2;
+    }
+  }
 }
