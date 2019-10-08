@@ -25,10 +25,25 @@
 
   &__title {
     @include font-size(18px, 22px, 26px);
-    color: $color-blue-bright;
     line-height: 1.2;
     margin-bottom: 0.5em;
     text-decoration: underline;
+  }
+
+  &__container:link &__title,
+  &__container:visited &__title {
+    color: $color-blue-bright;
+    text-decoration: underline;
+  }
+
+  &__container &__title:hover {
+    color: $color-grey-dark;
+    text-decoration: none;
+  }
+
+  &__container &__title:active {
+    color: #000;
+    text-decoration: none;
   }
 
   &__client span {

@@ -40,11 +40,22 @@ figure {
 }
 
 a:link,
-a:visited,
-a:hover,
-a:active {
+a:visited {
   color: $color-blue-bright;
   text-decoration: underline;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+a:hover {
+  color: $color-grey-dark;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:active {
+  color: #000;
+  text-decoration: none;
 }
 
 h1,
