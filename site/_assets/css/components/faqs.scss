@@ -1,0 +1,47 @@
+.faqs {
+  &__item {
+    padding: 40px 0 40px 0;
+  }
+
+  &__item {
+    border-top: 2px solid #dddde0;
+  }
+
+  &__item:last-child {
+    border-bottom: 2px solid #dddde0;
+  }
+
+  &__question {
+    @extend .heading-m;
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+    background-size: 52px 52px;
+    padding: 10px 70px 10px 0;
+    user-select: none;
+  }
+
+  &__answer {
+    margin-top: 1.2em;
+    user-select: none;
+  }
+
+  .has-js &__question {
+    cursor: pointer;
+  }
+
+  .has-js &__answer {
+    display: none;
+  }
+
+  .has-js &__question {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 52 52'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath fill='%23FFF' d='M-1219-935H381v2441h-1600z'/%3E%3Cpath fill='%23F7F8FA' d='M25.955 0L51.91 25.955 25.955 51.91 0 25.955z'/%3E%3Cpath d='M26 20.392v12.235M32.118 26.51H19.882' stroke='%230101FF' stroke-width='2' stroke-linecap='square'/%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  .has-js &__item.is-open &__question {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 52 52'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath fill='%23FFF' d='M-1219-1049H381v2441h-1600z'/%3E%3Cpath fill='%23AAFEE6' d='M25.955 0L51.91 25.955 25.955 51.91 0 25.955z'/%3E%3Cpath d='M32.118 26.51H19.882' stroke='%230101FF' stroke-width='2' stroke-linecap='square'/%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  .has-js &__item.is-open &__answer {
+    display: block;
+  }
+}

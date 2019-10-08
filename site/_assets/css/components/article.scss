@@ -1,4 +1,11 @@
 .article {
+  @include grid();
+
+  &__content {
+    @include span(1, -1);
+    @include span(2, -2, large);
+  }
+
   padding: {
     top: 128px;
     bottom: 128px;

@@ -6,10 +6,9 @@ module.exports = function(config) {
   // Use customised Markdown library
 
   const md = MarkdownIt({
-    html: true,
-    code: false
+    html: true
   });
-  config.setLibrary('md', md);
+  config.setLibrary('md', md.disable('code'));
 
   // Use customised Nunjucks environment
 
@@ -36,7 +35,14 @@ module.exports = function(config) {
 
   config.addFilter('isString', target => typeof target === 'string');
 
-  config.addFilter('markdown', str => md.render(str));
+  config.addFilter('markdown', str =>
+    md.render(str.replace(/^[\r\n]+|[\r\n]+$/g, ''))
+  );
+
+  config.addFilter('strip', str => {
+    const regex = new RegExp(`^[ \\t]*`, 'gm');
+    return str.replace(regex, '');
+  });
 
   config.addFilter('domain', url => {
     return url.indexOf('//') > -1 ? url.split('/')[2] : url.split('/')[0];

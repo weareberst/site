@@ -1,0 +1,10 @@
+<div class="faqs mx-1">
+  {% for question in questions %}
+  <div class="faqs__item"{% if id %} id="{{ id }}"{% endif %}>
+    <h2 class="faqs__question">{{ question.question }}</h2>
+    <div class="faqs__answer prose">
+    {{ question.answer | strip | markdown |safe  }}
+    </div>
+  </div>
+  {% endfor %}
+</div>
