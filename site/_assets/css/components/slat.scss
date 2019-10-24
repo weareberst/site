@@ -44,6 +44,13 @@
     z-index: 3;
   }
 
+  @media all and (min-width: $breakpoint-medium) {
+    &__container {
+      padding-left: $grid-gutter-large;
+      padding-right: $grid-gutter-large;
+    }
+  }
+
   @media all and (min-width: $breakpoint-large) {
     &__container {
       padding-left: $grid-gutter-large;

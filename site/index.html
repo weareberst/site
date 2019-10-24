@@ -9,8 +9,8 @@ teasers:
 
 <div class="slat">
   <div class="slat__container teaser-pair pt-2 mb-1">
-    {% component 'teaser.njk', { slug: teasers[0] } %}
-    {% component 'teaser.njk', { slug: teasers[1] } %}
+    {% component 'teaser.njk', { slug: teasers[0], class: 'reveal-hidden' } %}
+    {% component 'teaser.njk', { slug: teasers[1], class: 'reveal-hidden' } %}
   </div>
 </div>
 
@@ -22,7 +22,7 @@ teasers:
       <strong>We help our partners with&hellip;</strong>
     </p>
     <div class="services__panel">
-      <div class="services__item services__item--identify">
+      <div class="services__item services__item--identify reveal-hidden">
         {% include 'icons/service-identify.svg' %}
         <div class="services__item-container">
           <h4 class="services__type">Product Vision</h4>
@@ -42,7 +42,7 @@ teasers:
           </div>
         </div>
       </div>
-      <div class="services__item services__item--develop">
+      <div class="services__item services__item--develop reveal-hidden">
         {% include 'icons/service-develop.svg' %}
         <div class="services__item-container">
           <h4 class="services__type">Product Strategy</h4>
@@ -63,7 +63,7 @@ teasers:
           </div>
         </div>
       </div>
-      <div class="services__item services__item--distinguish">
+      <div class="services__item services__item--distinguish reveal-hidden">
         {% include 'icons/service-distinguish.svg' %}
         <div class="services__item-container">
           <h4 class="services__type">Product Experience</h4>
@@ -92,7 +92,7 @@ teasers:
       Continue the story by describing how we’ve created a flexible funding model to
       best cater for the people and <strong>approach we want to use</strong>.
     </p>
-    <div class="funding__panel">
+    <div class="funding__panel reveal-hidden">
       <div class="funding__option">
         <h4 class="funding__type">Fee-for-service</h4>
         <p class="funding__summary">You invest <em>your</em> capital in return for our expertise.</p>
@@ -110,8 +110,9 @@ teasers:
 
 <div class="slat mb-1">
   <div class="slat__container teaser-testimonial">
-    {% component 'teaser.njk', { slug: teasers[2] } %}
+    {% component 'teaser.njk', { slug: teasers[2], class: 'reveal-hidden' } %}
     {% component 'testimonial.njk', {
+      class: 'reveal-hidden',
       quote: 'Berst were able to get seriously under the skin of a problem. Producing deep and provocative insight and creative artistry to a much greater depth than the ‘typical’ contractor / agency.',
       cite: {
         name: 'Yani Petrova',

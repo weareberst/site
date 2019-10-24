@@ -52,7 +52,7 @@
 
 .bleed-right {
   margin-right: $grid-gutter * -1;
-  @media all and (min-width: $breakpoint-large) {
+  @media all and (min-width: $breakpoint-medium) {
     margin-right: $grid-gutter-large * -1;
   }
   @media all and (min-width: $breakpoint-xlarge) {
@@ -62,7 +62,7 @@
 
 .bleed-left {
   margin-left: $grid-gutter * -1;
-  @media all and (min-width: $breakpoint-large) {
+  @media all and (min-width: $breakpoint-medium) {
     margin-left: $grid-gutter-large * -1;
   }
   @media all and (min-width: $breakpoint-xlarge) {

@@ -45,6 +45,10 @@
     }
   }
 
+  & a:hover {
+    color: $color-white;
+  }
+
   &__company {
     font-size: 13px;
     @extend .mt-1;

@@ -34,7 +34,7 @@
   &__summary {
     @extend .heading-m;
     margin-bottom: 1em;
-    max-width: 270px;
+    // max-width: 270px;
   }
 
   @media all and (max-width: #{$breakpoint-large - 1px}) {
