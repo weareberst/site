@@ -37,7 +37,7 @@
     text-decoration: underline;
   }
 
-  & &__title:hover {
+  &:hover &__title {
     color: $color-grey-dark;
     text-decoration: none;
   }

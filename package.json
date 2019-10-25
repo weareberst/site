@@ -28,5 +28,8 @@
     "sass-loader": "^8.0.0",
     "scrollreveal": "^4.0.5",
     "vue-template-compiler": "^2.6.10"
+  },
+  "dependencies": {
+    "dom-slider": "^1.5.3"
   }
 }

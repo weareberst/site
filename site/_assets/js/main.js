@@ -1,11 +1,16 @@
 const $ = require('cash-dom');
+const slider = require('dom-slider');
 const ScrollReveal = require('scrollreveal').default;
 
 $('.faqs__item').each(function() {
   const item = $(this);
-  item.on('click', function() {
+  const content = item.find('.faqs__answer')[0];
+  item.addClass('is-open');
+  item.on('click', () => {
     item.toggleClass('is-open');
+    content.slideToggle();
   });
+  item.trigger('click');
 });
 
 function reveal(target, opts) {
@@ -134,5 +139,5 @@ reveal('.content--text', {
 
 reveal('.content--testimonial', {
   ...caseStudyDefaults,
-  origin: 'right'
+  origin: 'left'
 });
