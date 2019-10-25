@@ -55,13 +55,13 @@ reveal('.layout--home .masthead__contact', {
 // teaser pair
 
 reveal('.teaser-pair .teaser:first-child', {
-  distance: '100%',
+  distance: '50%',
   origin: 'right',
   delay: 250
 });
 
 reveal('.teaser-pair .teaser:last-child', {
-  distance: '100%',
+  distance: '50%',
   origin: 'left'
 });
 
@@ -92,7 +92,7 @@ reveal('.funding__panel', {
 // teaser testimonial pair
 
 reveal('.teaser-testimonial .teaser', {
-  distance: '100%',
+  distance: '50%',
   origin: 'left'
 });
 
