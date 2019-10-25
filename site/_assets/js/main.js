@@ -23,8 +23,6 @@ ScrollReveal({
   duration: 1000
 });
 
-ScrollReveal.debug = true;
-
 // intro
 reveal('.layout--home .masthead__logo img', {
   delay: 250
