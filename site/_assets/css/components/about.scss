@@ -2,45 +2,50 @@
   background-image: url('/img/james-and-james.jpg');
   background-position: left bottom;
   background-repeat: no-repeat;
-  background-size: 200vw auto;
+  background-size: 170vw auto;
 
   &__container {
     @include grid();
     @include tween('padding-top', 45px, 64px, 92px);
-    padding-bottom: 110vw;
-    // @include tween('padding-bottom', 45px, 64px, 92px);
+    padding-bottom: 105vw;
+    // @include tween('padding-bottom', 90px, 128px, 92px);
   }
 
   &__text {
     @include span(1, -1);
-    @include span(4, -1, large);
+    @include span(1, -2, large);
     @include span(6, -1, xlarge);
   }
 
-  @media all and (min-width: $breakpoint-medium) {
-    background-size: 170vw auto;
+  // @media all and (min-width: $breakpoint-medium) {
+  //   background-size: cover;
+  //
+  //   &__container {
+  //     padding-bottom: 10vw;
+  //   }
+  // }
 
-    &__container {
-      padding-bottom: 90vw;
-    }
-  }
-
-  @media all and (min-width: $breakpoint-large) {
-    background-size: 90vw auto;
-    background-position: 0 100%;
-
-    &__container {
-      @include tween('padding-bottom', 45px, 64px, 92px);
-    }
-  }
+  // @media all and (min-width: $breakpoint-large) {
+  //   background-size: cover;
+  //   // background-position: 0 100%;
+  //
+  //   &__container {
+  //     padding-bottom: 10vw;
+  //     // @include tween('padding-bottom', 45px, 64px, 92px);
+  //   }
+  // }
 
   @media all and (min-width: $breakpoint-xlarge) {
-    background-size: 100vw auto;
-    background-position: 50% 100%;
+    background-size: cover;
+    background-position: 36% 100%;
+    &__container {
+      padding-bottom: 15vw;
+      // @include tween('padding-bottom', 45px, 64px, 92px);
+    }
   }
 
   @media all and (min-width: $breakpoint-max) {
-    background-size: #{$breakpoint-max} auto;
-    background-position: 50% 100%;
+    background-size: auto 100%;
+    background-position: 50%;
   }
 }
