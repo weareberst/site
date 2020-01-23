@@ -83,6 +83,7 @@
 
 .teaser-pair {
   @include grid();
+  overflow: hidden;
 
   .teaser:first-child {
     order: 1;

@@ -14,10 +14,13 @@
   }
 
   &__title {
-    word-spacing: 1000px;
+    // word-spacing: 10000px;
     @extend .heading-personality;
     @include span(2, 5, xlarge);
     @include span(3, 6, xlarger);
+    span {
+      display: block;
+    }
   }
 
   &__strapline {
