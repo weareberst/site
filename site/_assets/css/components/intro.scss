@@ -15,10 +15,11 @@
 
   &__title {
     // word-spacing: 10000px;
+    // max-width: 100%;
     @extend .heading-personality;
     @include span(2, 5, xlarge);
     @include span(3, 6, xlarger);
-    span {
+    .sr & span {
       display: block;
     }
   }
