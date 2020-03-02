@@ -1,0 +1,99 @@
+---
+title: Title
+client: Client
+services: ['Tag', 'Tag','Tag']
+duration:  Project length
+images:
+  hero: /img/placeholder.png
+  logo: /img/placeholder.png
+websiteUrl: https://website.com
+intro:
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+---
+
+{% set text %}
+## Heading 2
+
+### Heading 3
+
+#### Heading 4
+
+Paragraph. With *bold*. _Emphasis_. And **_both_**. ~~Strikethrough~~. ~Underline~. Here’s a [hyperlink](https://ber.st). How about some `code`? Or even a code block.
+
+```
+10 print "james"
+20 goto 10
+```
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.
+
+![An image](/img/placeholder.png)
+
+* Unordered list
+* Lorem ipsum dolor
+* Lorem ipsum dolor
+
+---
+
+1. Ordered list
+2. Lorem ipsum dolor
+3. Lorem ipsum dolor
+
+---
+
+> This is a blockquote. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+
+{% endset %}
+{% component "content/text", {
+  text: text
+} %}
+
+{% set text %}
+## Image component
+{% endset %}
+{% component "content/text", {
+  text: text
+} %}
+
+{% component "content/image-pair", {
+  images: [
+    {
+      src: "https://placekitten.com/g/600/400",
+      caption: "A short caption"
+    },
+    {
+      src: "https://placekitten.com/g/900/500",
+      caption: "Another image with a caption"
+    }
+  ]
+} %}
+
+{% set text %}
+## Another image component
+{% endset %}
+{% component "content/text", {
+  text: text
+} %}
+
+{% component "content/image", {
+  src: "https://placekitten.com/g/1000/560",
+  alt: "Some optional alt text",
+  caption: "Another optional caption for another image",
+  variant: "offset"
+} %}
+
+
+{% set text %}
+## Another image component
+{% endset %}
+{% component "content/text", {
+  text: text
+} %}
+
+{% component "content/feature-image", {
+  small: "https://placekitten.com/g/768/1000",
+  medium: "https://placekitten.com/g/1274/716",
+  large: "https://placekitten.com/g/2400/1200",
+  caption: "Optional caption goes here"
+} %}
