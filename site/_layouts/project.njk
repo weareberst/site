@@ -22,18 +22,18 @@ layoutVariant: project
       <aside class="overview__aside">
         <h4 class="overview__what">What we did</h4>
 
-        {% if duration or launched %}
-        <ul class="overview__meta">
-          {% if duration %}<li>{{ duration }} duration</li>{% endif %}
-          {% if launched %}<li>Launched in {{ launched }}</li>{% endif %}
-        </ul>
-        {% endif %}
-
         {% if services %}
         <ul class="overview__meta">
         {% for service in services %}
           <li>{{ service }}</li>
         {% endfor %}
+        </ul>
+        {% endif %}
+
+        {% if duration or launched %}
+        <ul class="overview__meta">
+          {% if duration %}<li>{{ duration }} duration</li>{% endif %}
+          {% if launched %}<li>Launched in {{ launched }}</li>{% endif %}
         </ul>
         {% endif %}
 
