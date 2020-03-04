@@ -4,7 +4,7 @@ client: Meraki Travel
 services: ['Spin-out', 'Traveltech', 'Product strategy', 'Product experience','Scale-up']
 duration: 6 weeks
 images:
-  hero: /img/placeholder.png
+  hero: /img/temp-meraki-masthead.jpg
   logo: /img/placeholder.png
 websiteUrl: https://merakitravel.co.uk
 intro:
@@ -12,6 +12,12 @@ intro:
 next: virgin-holidays
 ---
 
+{% component "content/feature-image", {
+  small: "/img/temp-meraki-1.jpg",
+  medium: "/img/temp-meraki-1.jpg",
+  large: "/img/temp-meraki-1.jpg",
+  caption: "Optional caption goes here"
+} %}
 
 {% set text %}
 ## A missed connection
@@ -19,6 +25,19 @@ After only a year, Meraki had already succeeded where plenty of travel companies
 {% endset %}
 {% component "content/text", {
   text: text
+} %}
+
+{% component "content/image-pair", {
+  images: [
+    {
+      src: "https://placekitten.com/g/600/400",
+      caption: "Research and journey mapping revealed the most promising opportunities"
+    },
+    {
+      src: "https://placekitten.com/g/900/500",
+      caption: "Another image with a caption"
+    }
+  ]
 } %}
 
 {% set text %}
@@ -29,12 +48,26 @@ Over three two-weeks sprints at Meraki’s offices in London, we worked with the
   text: text
 } %}
 
+{% component "content/feature-image", {
+  small: "/img/temp-meraki-2.jpg",
+  medium: "/img/temp-meraki-2.jpg",
+  large: "/img/temp-meraki-2.jpg",
+  caption: "Optional caption goes here"
+} %}
+
 {% set text %}
 ## The difference we made
 The new booking experience made using Meraki playful, intuitive and a joy for would-be travellers - an adventure in itself. With this critical piece of the Meraki jigsaw in place, the team was able to start marketing themselves with confidence. They saw dwell time and repeat visits start to rise, and a lower bounce rate from the relaunched product. The company won a 2019 Travelolution Award for best website user experience. But, perhaps most tellingly, bookings rose by X% and X% more holidays were shared with others travellers. More people shaping their perfect holidays together, and more adventures through Meraki - just the start of the journey.
 {% endset %}
 {% component "content/text", {
   text: text
+} %}
+
+{% component "content/feature-image", {
+  small: "/img/temp-meraki-3.jpg",
+  medium: "/img/temp-meraki-3.jpg",
+  large: "/img/temp-meraki-3.jpg",
+  caption: "Video showing sazzy shit"
 } %}
 
 
