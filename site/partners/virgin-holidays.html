@@ -4,13 +4,26 @@ client: Virgin Holidays
 services: ['Established brand', 'Traveltech', 'Customer experience strategy', 'Service design','Scale-up']
 duration: 6 weeks
 images:
-  hero: /img/placeholder.png
+  hero: /img/vh-hero.png
   logo: /img/placeholder.png
 websiteUrl: https://virginholidays.co.uk
 intro:
   As a member of the well-known Virgin family, for the last 35 years Virgin Holidays has been sending Brits away to play all over the world. From its headquarters near Gatwick airport and retail stores around the UK, this award-winning and much-loved travel brand sells long-haul holidays and cruises over the phone, online and face-to-face.
 next: babylon-health
 ---
+
+{% component "content/image-pair", {
+  images: [
+    {
+      src: "/img/vh-kickoff-interviews.jpg",
+      caption: "A short caption"
+    },
+    {
+      src: "/img/vh-workshop-outputs.jpg",
+      caption: "Another image with a caption"
+    }
+  ]
+} %}
 
 {% set text %}
 ## Branching out
@@ -24,6 +37,13 @@ But they weren’t sure how this would - or could - work within their current sa
   text: text
 } %}
 
+{% component "content/feature-image", {
+  small: "/img/vh-wireflows-sml.png",
+  medium: "/img/vh-wireflows.png",
+  large: "/img/vh-wireflows.png",
+  caption: "Optional caption goes here"
+} %}
+
 {% set text %}
 ## A blueprint for change
 
@@ -32,6 +52,23 @@ Over a series of three two-week sprints, we worked with a cross-functional team 
 {% endset %}
 {% component "content/text", {
   text: text
+} %}
+
+{% component "content/feature-image", {
+  small: "https://placekitten.com/g/768/1000",
+  medium: "/img/vh-messaging.png",
+  large: "/img/vh-messaging.png",
+  caption: "Optional caption goes here AND here TOO!!"
+} %}
+
+{% component "content/testimonial", {
+  quote: 'Berst have proven their value time and time again. They seem to have that uncanny ability to shape a coherent strategy even when everything around them is uncertain and changing. What’s more they’re able to bring everyone along for the ride and communicate in a way that resonates with management and product teams alike.',
+  cite: {
+    name: 'Nathan Bolt',
+    role: 'Head of digital experience',
+    client: client,
+    img: '/img/tmp-avatar.png'
+  }
 } %}
 
 {% set text %}
@@ -44,6 +81,18 @@ With their new conversational commerce strategy in place, the team secured fundi
   text: text
 } %}
 
+{% component "content/image", {
+  src: "/img/vh-diagram.png",
+  alt: "Some optional alt text",
+  caption: "An optional caption for the image"
+} %}
+
+{% component "content/feature-image", {
+  small: "https://placekitten.com/g/768/1000",
+  medium: "/img/vh-hero-ui.png",
+  large: "/img/vh-hero-ui.png"
+} %}
+
 {% component "content/testimonial", {
   quote: 'Berst helped us innovate at a ridiculously fast pace. In a matter of weeks we had developed a compelling customer-focused business case for the board that would dramatically improve the way we engage with our customers. 3 months later we had launched our MVP and are already seeing the benefits.',
   cite: {
@@ -54,12 +103,8 @@ With their new conversational commerce strategy in place, the team secured fundi
   }
 } %}
 
-{% component "content/testimonial", {
-  quote: 'Berst have proven their value time and time again. They seem to have that uncanny ability to shape a coherent strategy even when everything around them is uncertain and changing. What’s more they’re able to bring everyone along for the ride and communicate in a way that resonates with management and product teams alike.',
-  cite: {
-    name: 'Nathan Bolt',
-    role: 'Head of digital experience',
-    client: client,
-    img: '/img/tmp-avatar.png'
-  }
+{% component "content/image", {
+  src: "/img/vh-user-narratives.png",
+  alt: "Some optional alt text",
+  caption: "An optional caption for the image"
 } %}
