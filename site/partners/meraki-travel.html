@@ -12,6 +12,12 @@ intro:
 next: virgin-holidays
 ---
 
+{% component "content/feature-image", {
+  small: "/img/meraki-map-sml.jpg",
+  medium: "/img/meraki-map.jpg",
+  large: "/img/meraki-map.jpg",
+  caption: "Optional caption goes here"
+} %}
 
 {% set text %}
 ## A missed connection
@@ -19,6 +25,12 @@ After only a year, Meraki had already succeeded where plenty of travel companies
 {% endset %}
 {% component "content/text", {
   text: text
+} %}
+
+{% component "content/image", {
+  src: "/img/meraki-diagram.png",
+  alt: "Some optional alt text",
+  caption: "An optional caption for the image"
 } %}
 
 {% set text %}
@@ -29,6 +41,12 @@ Over three two-weeks sprints at Meraki’s offices in London, we worked with the
   text: text
 } %}
 
+{% component "content/image", {
+  src: "/img/meraki-sketches.png",
+  alt: "Some optional alt text",
+  caption: "An optional caption for the image"
+} %}
+
 {% set text %}
 ## The difference we made
 The new booking experience made using Meraki playful, intuitive and a joy for would-be travellers - an adventure in itself. With this critical piece of the Meraki jigsaw in place, the team was able to start marketing themselves with confidence. They saw dwell time and repeat visits start to rise, and a lower bounce rate from the relaunched product. The company won a 2019 Travelolution Award for best website user experience. But, perhaps most tellingly, bookings rose by X% and X% more holidays were shared with others travellers. More people shaping their perfect holidays together, and more adventures through Meraki - just the start of the journey.
@@ -37,6 +55,18 @@ The new booking experience made using Meraki playful, intuitive and a joy for wo
   text: text
 } %}
 
+{% component "content/feature-image", {
+  small: "/img/meraki-ui-sml.png",
+  medium: "/img/meraki-ui.png",
+  large: "/img/meraki-ui.png",
+  caption: "Optional caption goes here"
+} %}
+
+{% component "content/feature-image", {
+  small: "/img/meraki-responsive-home-sml.jpg",
+  medium: "/img/meraki-responsive-home.jpg",
+  large: "/img/meraki-responsive-home.jpg"
+} %}
 
 {% component "content/testimonial", {
   quote: 'Well good.',

@@ -16,12 +16,12 @@ next: meraki-travel
 {% component "content/image-pair", {
   images: [
     {
-      src: "https://placekitten.com/g/600/400",
-      caption: "A short caption"
+      src: "/img/babylon-missionstatement.jpg",
+      caption: "Babylon Health's mission statement. Photo courtesy of Tom Harman"
     },
     {
-      src: "https://placekitten.com/g/900/500",
-      caption: "Another image with a caption"
+      src: "/img/babylon-currentapp.jpg",
+      caption: "Book virtual GP consultations"
     }
   ]
 } %}
@@ -38,10 +38,9 @@ Blending research, design thinking and prototyping, we worked with the diverse t
 } %}
 
 {% component "content/feature-image", {
-  small: "https://placekitten.com/g/768/1000",
-  medium: "https://placekitten.com/g/1274/716",
-  large: "https://placekitten.com/g/2400/1200",
-  caption: "Optional caption goes here"
+  small: "/img/babylon-nownextfuture.jpg",
+  medium: "/img/babylon-nownextfuture.jpg",
+  large: "/img/babylon-nownextfuture.jpg"
 } %}
 
 {% set text %}
@@ -53,12 +52,14 @@ We started with the immediate future - the next year. Working alongside their cl
   text: text
 } %}
 
-
 {% component "content/image", {
-  src: "https://placekitten.com/g/1000/560",
-  alt: "Some optional alt text",
-  caption: "Another optional caption for another image",
-  variant: "offset"
+  src: "/img/babylon-patientcycle.png"
+} %}
+
+{% component "content/feature-image", {
+  small: "/img/babylon-adherance-ui-sml.png",
+  medium: "/img/babylon-adherance-ui.png",
+  large: "/img/babylon-adherance-ui.png"
 } %}
 
 {% set text %}
@@ -72,18 +73,20 @@ Our next step was to help them look beyond reactive diagnosis and treatment to a
 } %}
 
 
-{% component "content/image-pair", {
-  variant: 'even',
-  images: [
-    {
-      src: "https://placekitten.com/g/600/600",
-      caption: "A short caption"
-    },
-    {
-      src: "https://placekitten.com/g/600/300",
-      caption: "Another image with a caption"
-    }
-  ]
+{% component "content/image", {
+  src: "/img/babylon-lifestages.png"
+} %}
+
+{% component "content/feature-image", {
+  small: "/img/babylon-ui-01-sml.png",
+  medium: "/img/babylon-ui-01.png",
+  large: "/img/babylon-ui-01.png"
+} %}
+
+{% component "content/feature-image", {
+  small: "/img/babylon-ui-02-sml.png",
+  medium: "/img/babylon-ui-02.png",
+  large: "/img/babylon-ui-02.png"
 } %}
 
 {% set text %}
@@ -97,8 +100,7 @@ Using storytelling techniques, we painted a compelling picture of the future for
 } %}
 
 {% component "content/image", {
-  src: "https://placekitten.com/g/1000/560",
-  caption: "An optional caption for the image"
+  src: "/img/babylon-narrative.png"
 } %}
 
 
@@ -110,9 +112,4 @@ Using storytelling techniques, we painted a compelling picture of the future for
     client: client,
     img: '/img/tmp-avatar.png'
   }
-} %}
-
-{% component "content/image", {
-  src: "https://placekitten.com/g/1000/560",
-  caption: "An optional caption for the image"
 } %}
