@@ -1,5 +1,6 @@
 # robots.txt for https://ber.st/
+# Crawl everything
+User-agent: *
+Allow: /
 # Sitemap
 Sitemap: https://ber.st/sitemap.xml
-# Crawl everything
-User-agent: * Disallow:
