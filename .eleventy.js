@@ -48,6 +48,9 @@ module.exports = function(config) {
     return url.indexOf('//') > -1 ? url.split('/')[2] : url.split('/')[0];
   });
 
+  // copy files from root of site
+  config.addPassthroughCopy('site/*.(png|ico|txt|xml|webmanifest)');
+
   return {
     dir: {
       input: 'site',
