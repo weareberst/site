@@ -2,7 +2,7 @@
   <picture>
     {% if large %}<source srcset="{{ large }}" media="(min-width: 1274px)">{% endif %}
     {% if medium %}<source srcset="{{ medium }}" media="(min-width: 768px)">{% endif %}
-    <img class="content__img" src="{{ small }}">
+    <img class="content__img" src="{{ small }}"{% if alt %} alt="{{ alt }}"{% endif %}>
   </picture>
   {% if caption %}<p class="content__caption slat__container">{{ caption }}</p>{% endif %}
 </div>
