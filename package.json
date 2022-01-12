@@ -19,7 +19,7 @@
     "imagemin-webpack-plugin": "^2.4.2",
     "laravel-mix": "^5.0.1",
     "laravel-mix-imagemin": "^1.0.3",
-    "markdown-it": "^10.0.0",
+    "markdown-it": "^12.3.2",
     "normalize-scss": "^7.0.1",
     "nunjucks": "^3.2.0",
     "nunjucks-include-with": "^1.0.5",
