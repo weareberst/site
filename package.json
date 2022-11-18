@@ -23,7 +23,7 @@
     "normalize-scss": "^7.0.1",
     "nunjucks": "^3.2.0",
     "nunjucks-include-with": "^1.0.5",
-    "resolve-url-loader": "^3.1.1",
+    "resolve-url-loader": "^5.0.0",
     "sass": "^1.25.0",
     "sass-loader": "^8.0.2",
     "scrollreveal": "^4.0.5",
